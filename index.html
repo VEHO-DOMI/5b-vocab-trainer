@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v2.0 – 2026-03-25 · DomiVocab 5B -->
+<!-- v2.1 – 2026-03-28 · DomiVocab 5B · Rebuilt from 3rd Grade template -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -65,13 +65,34 @@ body {
   line-height: 1.5;
 }
 
+/* Typography */
 /* Header — DomiVocab branding */
-.header-container { text-align: center; padding: 52px 32px 40px; position: relative; overflow: hidden; border-radius: 24px; }
-.header-glow { position: absolute; top: -30%; left: 50%; transform: translateX(-50%); width: 280px; height: 280px; border-radius: 50%; pointer-events: none; background: radial-gradient(circle, rgba(45,212,191,0.1), transparent 70%); }
-.header-title { font-family: 'Fredoka', sans-serif; font-size: 56px; font-weight: 700; margin: 0; line-height: 1; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; display: inline-block; letter-spacing: -1px; position: relative; background-image: linear-gradient(140deg, #38e8cc, #78d4c4 50%, #e07830 90%); }
-.header-tagline { font-family: 'Quicksand', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 5px; text-transform: uppercase; margin: 10px 0 0; color: rgba(255,255,255,0.28); }
-.header-grade { font-family: 'Fredoka', sans-serif; font-size: 18px; font-weight: 600; margin: 16px 0 0; color: rgba(255,255,255,0.42); }
-.header-school { font-family: 'Quicksand', sans-serif; font-size: 10.5px; font-weight: 500; line-height: 1.6; margin: 14px 0 0; letter-spacing: 0.3px; color: rgba(255,255,255,0.16); }
+.header-container {
+  text-align: center; padding: 52px 32px 40px; position: relative; overflow: hidden; border-radius: 24px;
+}
+.header-glow {
+  position: absolute; top: -30%; left: 50%; transform: translateX(-50%);
+  width: 280px; height: 280px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(45,212,191,0.1), transparent 70%);
+}
+.header-title {
+  font-family: 'Fredoka', sans-serif; font-size: 56px; font-weight: 700; margin: 0;
+  line-height: 1; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; color: transparent; display: inline-block; letter-spacing: -1px;
+  position: relative; background-image: linear-gradient(140deg, #38e8cc, #78d4c4 50%, #e07830 90%);
+}
+.header-tagline {
+  font-family: 'Quicksand', sans-serif; font-size: 13px; font-weight: 600;
+  letter-spacing: 5px; text-transform: uppercase; margin: 10px 0 0; color: rgba(255,255,255,0.28);
+}
+.header-grade {
+  font-family: 'Fredoka', sans-serif; font-size: 18px; font-weight: 600;
+  margin: 16px 0 0; color: rgba(255,255,255,0.42);
+}
+.header-school {
+  font-family: 'Quicksand', sans-serif; font-size: 10.5px; font-weight: 500;
+  line-height: 1.6; margin: 14px 0 0; letter-spacing: 0.3px; color: rgba(255,255,255,0.16);
+}
 h1 { display: none; }
 .subtitle { display: none; }
 .school-name { display: none; }
@@ -153,6 +174,7 @@ h1 { display: none; }
   font-family: inherit; transition: all 0.15s; font-weight: 500;
 }
 .logout-btn:hover { color: var(--wrong); border-color: rgba(239,68,68,0.3); background: rgba(239,68,68,0.06); }
+/* Legacy compat */
 .welcome-bar { display: none; }
 .badge-row { display: flex; gap: 0.3rem; padding: 0; margin: 0; align-items: center; }
 .badge-row::-webkit-scrollbar { display: none; }
@@ -195,8 +217,8 @@ h1 { display: none; }
 }
 .source-btn:hover { background: var(--card-hover); border-color: rgba(255,255,255,0.12); transform: translateY(-1px); }
 .source-btn.selected {
-  background: rgba(20,184,166,0.1); border-color: rgba(20,184,166,0.45);
-  color: var(--text); box-shadow: 0 0 20px rgba(20,184,166,0.08), inset 0 0 20px rgba(20,184,166,0.04);
+  background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.45);
+  color: var(--text); box-shadow: 0 0 20px rgba(59,130,246,0.08), inset 0 0 20px rgba(59,130,246,0.04);
 }
 .source-btn .count { display: block; font-size: 0.64rem; color: var(--muted); font-weight: 400; margin-top: 0.2rem; }
 .source-btn .progress-indicator {
@@ -209,7 +231,7 @@ h1 { display: none; }
   background: transparent; color: var(--muted); font-size: 0.7rem; font-weight: 600;
   cursor: pointer; font-family: inherit; transition: all 0.2s; letter-spacing: -0.01em;
 }
-.quick-btn:hover { border-color: rgba(20,184,166,0.4); color: var(--accent-light); background: rgba(20,184,166,0.05); }
+.quick-btn:hover { border-color: rgba(59,130,246,0.4); color: var(--accent-light); background: rgba(59,130,246,0.05); }
 
 /* Type Selection */
 .type-grid { display: flex; gap: 0.4rem; flex-wrap: wrap; }
@@ -222,8 +244,8 @@ h1 { display: none; }
 }
 .type-btn:hover { background: var(--card-hover); transform: translateY(-1px); }
 .type-btn.selected {
-  background: rgba(20,184,166,0.1); border-color: rgba(20,184,166,0.45); color: var(--text);
-  box-shadow: 0 0 16px rgba(20,184,166,0.08);
+  background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.45); color: var(--text);
+  box-shadow: 0 0 16px rgba(59,130,246,0.08);
 }
 .type-btn.selected[data-type="context"] { background: rgba(56,189,248,0.1); border-color: rgba(56,189,248,0.45); box-shadow: 0 0 16px rgba(56,189,248,0.08); }
 .type-btn.selected[data-type="context-hard"] { background: rgba(56,189,248,0.15); border-color: rgba(56,189,248,0.5); box-shadow: 0 0 16px rgba(56,189,248,0.1); }
@@ -241,7 +263,7 @@ h1 { display: none; }
 .avatar-pick-item:hover { transform: scale(1.12); }
 .avatar-pick-item.selected { border-color: #f0c040; transform: scale(1.15); }
 .avatar-pick-name { font-size: 10px; text-align: center; opacity: 0.5; margin-top: 2px; line-height: 1.2; max-width: 56px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-#avatar-picker-modal { background: #0f1a1a; color: rgba(255,255,255,0.9); }
+#avatar-picker-modal { background: #161d2e; color: rgba(255,255,255,0.9); }
 
 /* Rank display */
 #rank-display { color: rgba(255,255,255,0.9); }
@@ -249,6 +271,11 @@ h1 { display: none; }
 .profile-rank-pill.zone-silver { background: linear-gradient(135deg, #b8b8b8, #6b6b6b); color: #fff; }
 .profile-rank-pill.zone-gold { background: linear-gradient(135deg, #f0c040, #a67c2e); color: #412402; }
 .profile-rank-pill.zone-diamond { background: linear-gradient(135deg, #b8a9f0, #6e5cbf); color: #fff; }
+#rank-progress-fill { background: var(--accent); }
+.zone-bronze ~ .profile-xp-bar #rank-progress-fill, #rank-progress-fill.fill-bronze { background: #d4874a; }
+.zone-silver ~ .profile-xp-bar #rank-progress-fill, #rank-progress-fill.fill-silver { background: #9e9e9e; }
+.zone-gold ~ .profile-xp-bar #rank-progress-fill, #rank-progress-fill.fill-gold { background: #f0c040; }
+.zone-diamond ~ .profile-xp-bar #rank-progress-fill, #rank-progress-fill.fill-diamond { background: #b8a9f0; }
 .rank-pill.zone-bronze { background: #f5c4a1; color: #4a1b0c; }
 .rank-pill.zone-silver { background: #d3d1c7; color: #2c2c2a; }
 .rank-pill.zone-gold { background: #fac775; color: #412402; }
@@ -290,7 +317,7 @@ h1 { display: none; }
   color: white; box-shadow: 0 4px 20px var(--accent-glow), inset 0 1px 0 rgba(255,255,255,0.15);
   text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
-.btn-primary:hover { box-shadow: 0 6px 28px rgba(20,184,166,0.35), inset 0 1px 0 rgba(255,255,255,0.15); }
+.btn-primary:hover { box-shadow: 0 6px 28px rgba(59,130,246,0.35), inset 0 1px 0 rgba(255,255,255,0.15); }
 .btn-primary:disabled { opacity: 0.3; cursor: not-allowed; box-shadow: none; transform: none; }
 .btn-secondary {
   background: rgba(255,255,255,0.05); color: var(--text-secondary);
@@ -334,6 +361,9 @@ h1 { display: none; }
 .stat-card:nth-child(4) .stat-value { color: #fb923c; }
 .welcome-xp { display: flex; align-items: center; gap: 0.3rem; font-size: 0.8rem; color: var(--accent2); font-weight: 600; margin-top: 0.15rem; }
 
+.badge-row { display: flex; gap: 0.3rem; overflow-x: auto; padding: 0; margin: 0; scrollbar-width: none; -ms-overflow-style: none; align-items: center; }
+.badge-row::-webkit-scrollbar { display: none; }
+.badge-row .badge-icon { width: 22px; height: 22px; font-size: 14px; }
 .badge-icon { font-size: 1.4rem; min-width: 2.2rem; height: 2.2rem; display: flex; align-items: center; justify-content: center; background: var(--card); border: 1px solid var(--card-border); border-radius: 10px; cursor: pointer; transition: transform 0.15s; }
 .badge-icon:hover { transform: scale(1.15); }
 .badge-icon.empty { opacity: 0.3; font-size: 1rem; }
@@ -372,7 +402,7 @@ h1 { display: none; }
 #leaderboard-screen .progress-nav { margin-bottom: 1rem; }
 .lb-section-title { font-weight: 800; font-size: 0.85rem; color: var(--accent2); text-transform: uppercase; letter-spacing: 0.08em; margin: 1.2rem 0 0.6rem; }
 .lb-row { display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 0.8rem; border-radius: 10px; margin-bottom: 0.3rem; background: var(--card); border: 1px solid var(--card-border); }
-.lb-row.me { border-color: rgba(20,184,166,0.3); background: rgba(20,184,166,0.06); }
+.lb-row.me { border-color: rgba(59,130,246,0.3); background: rgba(59,130,246,0.06); }
 .lb-rank { font-weight: 800; min-width: 1.8rem; text-align: center; font-size: 0.9rem; }
 .lb-name { flex: 1; font-weight: 600; font-size: 0.9rem; }
 .lb-xp { font-weight: 800; color: var(--accent2); font-size: 0.9rem; }
@@ -409,8 +439,8 @@ h1 { display: none; }
 }
 .quiz-prompt .gap {
   display: inline; font-weight: 700; color: var(--accent-light); letter-spacing: 0.04em;
-  border-bottom: 2px dashed rgba(20,184,166,0.35); padding: 0.05em 0.2em;
-  background: rgba(20,184,166,0.06); border-radius: 4px 4px 0 0;
+  border-bottom: 2px dashed rgba(59,130,246,0.35); padding: 0.05em 0.2em;
+  background: rgba(59,130,246,0.06); border-radius: 4px 4px 0 0;
 }
 .quiz-prompt .gap.gap-hard {
   letter-spacing: 0; border-bottom: none; background: none; padding: 0;
@@ -493,7 +523,7 @@ h1 { display: none; }
 .loading { text-align: center; padding: 2rem; color: var(--muted); }
 .spinner {
   display: inline-block; width: 28px; height: 28px;
-  border: 3px solid rgba(20,184,166,0.15); border-top-color: var(--accent);
+  border: 3px solid rgba(59,130,246,0.15); border-top-color: var(--accent);
   border-radius: 50%; animation: spin 0.7s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -510,7 +540,8 @@ h1 { display: none; }
   .profile-xp-labels { font-size: 0.55rem; }
   .avatar.avatar-lg { width: 48px; height: 48px; }
   .logout-btn { font-size: 0.6rem; padding: 0.2rem 0.5rem; }
-  .header-title { font-size: 1.7rem; }
+  .header-title { font-size: 40px; }
+  .header-container { padding: 36px 20px 28px; }
   .source-grid { gap: 0.35rem; }
   .source-btn { padding: 0.65rem 0.4rem; font-size: 0.78rem; }
   .quiz-card { padding: 1.3rem 1rem; }
@@ -533,7 +564,8 @@ h1 { display: none; }
 /* Responsive — Desktop */
 @media (min-width: 768px) {
   .screen { max-width: 780px; padding: 0 2rem; }
-  .header-title { font-size: 2.6rem; margin: 2rem 0 0.2rem; }
+  .header-title { font-size: 64px; }
+  .header-container { padding: 56px 40px 44px; }
 
   .welcome-bar { margin-bottom: 1.2rem; }
   .welcome-name { font-size: 1.4rem; }
@@ -619,7 +651,7 @@ h1 { display: none; }
 @media (min-width: 1024px) {
   .screen { max-width: 900px; padding: 0 2.5rem; }
   .screen.active { align-items: stretch; }
-  .header-title { font-size: 3rem; }
+  .header-title { font-size: 72px; }
   .welcome-bar { max-width: 900px; width: 100%; }
   .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
   .stat-card { padding: 1.2rem 1rem; }
@@ -647,14 +679,14 @@ h1 { display: none; }
 /* Extra-large desktop */
 @media (min-width: 1440px) {
   .screen { max-width: 1080px; }
-  .header-title { font-size: 3.4rem; }
+  .header-title { font-size: 80px; }
   .source-grid { grid-template-columns: repeat(6, 1fr); }
   .stat-value { font-size: 2.3rem; }
   .quiz-card { padding: 3rem 3.5rem; }
   .quiz-prompt { font-size: 1.45rem; }
   .answer-input { font-size: 1.25rem; padding: 1.1rem 1.4rem; }
 }
-  .header-title { font-size: 3rem; }
+  .header-title { font-size: 72px; }
   .source-grid { grid-template-columns: repeat(4, 1fr); }
   .quiz-card { padding: 2.4rem 2.5rem; }
   .quiz-prompt { font-size: 1.35rem; }
@@ -727,7 +759,7 @@ body.playing .header-container { display: none; }
 .progress-overall .stat-sub { font-size: 0.65rem; color: var(--muted); margin-top: 0.15rem; }
 
 .progress-ring-wrap { text-align: center; margin-bottom: 1.2rem; }
-.progress-ring-wrap svg { transform: rotate(-90deg); filter: drop-shadow(0 0 12px rgba(20,184,166,0.15)); }
+.progress-ring-wrap svg { transform: rotate(-90deg); filter: drop-shadow(0 0 12px rgba(59,130,246,0.15)); }
 .progress-ring-label { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; }
 
 .source-progress-list { width: 100%; }
@@ -736,8 +768,8 @@ body.playing .header-container { display: none; }
   padding: 0.9rem 1rem; margin-bottom: 0.45rem; cursor: pointer; transition: all 0.2s;
   box-shadow: var(--shadow-card);
 }
-.source-progress-item:hover { border-color: rgba(20,184,166,0.25); background: var(--card-hover); transform: translateY(-1px); }
-.source-progress-item.expanded { border-color: rgba(20,184,166,0.4); box-shadow: var(--shadow-elevated); }
+.source-progress-item:hover { border-color: rgba(59,130,246,0.25); background: var(--card-hover); transform: translateY(-1px); }
+.source-progress-item.expanded { border-color: rgba(59,130,246,0.4); box-shadow: var(--shadow-elevated); }
 .source-progress-header { display: flex; justify-content: space-between; align-items: center; }
 .source-progress-name { font-weight: 700; font-size: 0.9rem; }
 .source-progress-stats { display: flex; gap: 0.6rem; font-size: 0.7rem; color: var(--muted); }
@@ -797,15 +829,15 @@ body.playing .header-container { display: none; }
 .ref-source-title {
   font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em;
   color: var(--accent-light); margin-bottom: 0.5rem; padding: 0.35rem 0;
-  border-bottom: 1px solid rgba(20,184,166,0.15);
+  border-bottom: 1px solid rgba(59,130,246,0.15);
 }
 .ref-word-item {
   background: var(--card); border: 1px solid var(--card-border); border-radius: 12px;
   padding: 0.8rem 1rem; margin-bottom: 0.35rem; cursor: pointer; transition: all 0.2s;
   box-shadow: var(--shadow-card);
 }
-.ref-word-item:hover { border-color: rgba(20,184,166,0.25); background: var(--card-hover); transform: translateY(-1px); }
-.ref-word-item.expanded { border-color: rgba(20,184,166,0.4); box-shadow: var(--shadow-elevated); transform: none; }
+.ref-word-item:hover { border-color: rgba(59,130,246,0.25); background: var(--card-hover); transform: translateY(-1px); }
+.ref-word-item.expanded { border-color: rgba(59,130,246,0.4); box-shadow: var(--shadow-elevated); transform: none; }
 .ref-word-header { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
 .ref-word-en { font-weight: 700; font-size: 0.88rem; color: var(--text); }
 .ref-word-de { font-size: 0.78rem; color: var(--trans-color); font-style: italic; flex-shrink: 0; }
@@ -819,6 +851,26 @@ body.playing .header-container { display: none; }
 .ref-detail-label:first-child { margin-top: 0; }
 .ref-detail-text { color: var(--text-secondary); }
 
+/* Class Selection Screen */
+.section-select-wrap { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 1.5rem; }
+.section-select-wrap h2 { font-size: 1.1rem; font-weight: 700; color: var(--text-secondary); }
+.section-btns { display: flex; gap: 0.6rem; }
+.section-btn {
+  padding: 1rem 1.8rem; border-radius: var(--radius-lg); font-size: 1.2rem; font-weight: 800;
+  background: var(--card); border: 2px solid var(--card-border); color: var(--text);
+  cursor: pointer; transition: all 0.2s; font-family: inherit;
+}
+.section-btn:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-elevated); }
+.section-btn.selected { background: var(--accent); border-color: var(--accent); color: white; box-shadow: 0 4px 20px var(--accent-glow); }
+.section-pin-row { display: flex; gap: 0.5rem; align-items: center; }
+.section-pin-row input { width: 140px; padding: 0.6rem; border-radius: var(--radius); border: 1.5px solid var(--card-border); background: var(--card); color: var(--text); font-family: inherit; font-size: 0.9rem; text-align: center; -webkit-text-security: disc; }
+.section-pin-row input:focus { outline: none; border-color: var(--accent); }
+.section-error { color: var(--wrong); font-size: 0.82rem; }
+.section-tag { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.7rem; font-weight: 700; margin-left: 0.3rem; }
+.section-tag-3a { background: rgba(59,130,246,0.15); color: #60a5fa; }
+.section-tag-3b { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.section-tag-3c { background: rgba(34,197,94,0.15); color: #22c55e; }
+
 /* Custom scrollbar global */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -826,91 +878,443 @@ body.playing .header-container { display: none; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
 
 /* Selection color */
-::selection { background: rgba(20,184,166,0.3); color: var(--text); }
+::selection { background: rgba(59,130,246,0.3); color: var(--text); }
 
 /* Card slide animations */
-@keyframes cardSlideOut { from { opacity:1; transform:translateX(0); } to { opacity:0; transform:translateX(-60px); } }
-@keyframes cardSlideIn { from { opacity:0; transform:translateX(60px); } to { opacity:1; transform:translateX(0); } }
-.card-slide-out { animation: cardSlideOut 0.2s ease-in forwards; }
-.card-slide-in { animation: cardSlideIn 0.25s ease-out forwards; }
-.flash-correct { animation: flashCorrect 0.4s ease; }
-.flash-wrong { animation: flashWrong 0.4s ease; }
-@keyframes flashCorrect { 0%{box-shadow:0 0 0 0 rgba(34,197,94,0.4);} 50%{box-shadow:0 0 20px 4px rgba(34,197,94,0.25);} 100%{box-shadow:none;} }
-@keyframes flashWrong { 0%{box-shadow:0 0 0 0 rgba(239,68,68,0.4);} 50%{box-shadow:0 0 20px 4px rgba(239,68,68,0.25);} 100%{box-shadow:none;} }
+.card-slide-out { transform: translateX(-40px); opacity: 0; transition: transform 0.2s ease, opacity 0.2s ease; }
+.card-slide-in { transform: translateX(40px); opacity: 0; }
+@keyframes flashCorrect { 0% { background-color: rgba(80,200,120,0.15); } 100% { background-color: transparent; } }
+@keyframes flashWrong { 0% { background-color: rgba(220,60,60,0.15); } 100% { background-color: transparent; } }
+.flash-correct { animation: flashCorrect 0.4s ease-out; }
+.flash-wrong { animation: flashWrong 0.4s ease-out; }
 
-/* Word of the Day */
-#wotd-card { background: rgba(45,212,191,0.08); border: 1px solid rgba(45,212,191,0.15); color: rgba(255,255,255,0.9); border-radius: var(--radius-lg); padding: 1rem 1.1rem; margin-bottom: 0.8rem; width: 100%; }
-#wotd-card h3 { font-size: 0.68rem; color: var(--accent-light); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 0.5rem; }
-#wotd-word { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.2rem; }
-#wotd-german { font-size: 0.85rem; color: var(--accent-light); margin-bottom: 0.3rem; }
-#wotd-def { font-size: 0.8rem; opacity: 0.75; line-height: 1.4; }
-#wotd-sentence { font-size: 0.78rem; opacity: 0.6; font-style: italic; margin-top: 0.3rem; }
+/* Word of the Day card */
+#wotd-card { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.15); color: rgba(255,255,255,0.9); border-radius: var(--radius); padding: 1rem 1.2rem; margin-bottom: 0.8rem; }
 
-/* Weekly Class Goal */
-#weekly-goal { background: rgba(45,212,191,0.06); border: 1px solid rgba(45,212,191,0.12); color: rgba(255,255,255,0.9); border-radius: var(--radius-lg); padding: 1rem 1.1rem; margin-bottom: 0.8rem; width: 100%; }
-#weekly-goal h3 { font-size: 0.68rem; color: var(--accent-light); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 0.6rem; }
-#wg-track { background: rgba(255,255,255,0.1); height: 10px; border-radius: 5px; overflow: hidden; margin-bottom: 0.4rem; }
-#wg-fill { background: linear-gradient(90deg, #2dd4bf, #5eead4); height: 100%; border-radius: 5px; transition: width 0.6s ease; }
-#wg-label { display: flex; justify-content: space-between; font-size: 0.75rem; }
-#wg-current { color: #5eead4; font-weight: 700; }
-#wg-target { opacity: 0.5; }
-.wg-reached #wg-fill { background: linear-gradient(90deg, #22c55e, #4ade80); }
-.wg-reached #wg-current { color: #4ade80; }
+/* Weekly Goal card */
+#weekly-goal-card { background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.15); border-radius: var(--radius); padding: 1rem 1.2rem; margin-bottom: 0.8rem; }
 
-/* ===== BATTLE SYSTEM CSS ===== */
-.battle-modal-bg { background:#0f1a1a;color:rgba(255,255,255,0.9); }
-.btn-battle {
-  background: linear-gradient(135deg, rgba(20,184,166,0.18), rgba(249,115,22,0.18));
-  border: 1px solid rgba(20,184,166,0.3);
-  color: #2DD4BF;
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 0.7rem 1rem;
-  border-radius: var(--radius);
-  cursor: pointer;
-  width: 100%;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-.btn-battle:hover { background: linear-gradient(135deg, rgba(20,184,166,0.28), rgba(249,115,22,0.28)); }
-.btn-battle:active { transform: scale(0.97); }
-#battle-screen .card {
+/* Tighter home screen spacing */
+.stats-bar { margin-bottom: 0.5rem; }
+.badge-row { margin-bottom: 0.4rem; }
+#wotd-card, #weekly-goal-card { margin-bottom: 0.5rem; }
+.daily-card { margin-bottom: 0.5rem; }
+#rank-display { margin-bottom: 0.4rem !important; }
+
+/* Battle system */
+.btn-battle { width:100%;padding:14px;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;border:none;margin-top:8px;background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;transition:transform 0.1s,opacity 0.1s; }
+.btn-battle:hover { opacity:0.9; }
+.btn-battle:active { transform:scale(0.98); }
+.battle-modal-bg { background:#161d2e;color:rgba(255,255,255,0.9); }
+#battle-area { background:rgba(255,255,255,0.05);border-radius:14px; }
+#battle-input { background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.15); }
+#battle-input:focus { border-color:rgba(255,255,255,0.3);outline:none; }
+#battle-timer-bar { background:rgba(255,255,255,0.1); }
+#battle-timer-fill { background:#f59e0b; }
+#battle-countdown { font-size:64px;font-weight:800; }
+@keyframes countdownPulse { 0%{transform:scale(1.5);opacity:0}50%{opacity:1}100%{transform:scale(1);opacity:1} }
+
+/* Today card */
+.today-card {
   background: var(--card);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: 0;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
 }
-#battle-countdown {
-  font-size: 72px;
-  font-weight: 900;
-  text-align: center;
-  color: var(--accent);
+.today-section {
+  padding: 1rem 1.2rem;
 }
-@keyframes countdownPulse {
-  0% { transform: scale(1.5); opacity: 0.5; }
-  100% { transform: scale(1); opacity: 1; }
+.today-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
 }
-@keyframes popIn {
-  0% { transform: scale(0.8); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+.today-label {
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--accent-light);
 }
-#battle-input {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: var(--radius);
-  border: 1px solid var(--card-border);
-  background: var(--card);
-  color: var(--text);
-  font-size: 16px;
-  font-family: inherit;
-  outline: none;
-  transition: border-color 0.2s;
+.today-source, .today-date {
+  font-size: 0.68rem;
+  color: var(--muted);
 }
-#battle-input:focus { border-color: var(--accent); }
+.today-wotd {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+.today-word {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.today-german {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+.today-def {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+}
+.today-divider {
+  height: 1px;
+  background: var(--card-border);
+  margin: 0;
+}
+.today-daily-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+}
 
+/* Start Practice button */
+.btn-start-practice {
+  font-size: 1.1rem !important;
+  padding: 1rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px;
+}
+
+/* Practice Setup Overlay */
+.practice-setup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--bg);
+  z-index: 9000;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  animation: fadeIn 0.2s ease;
+}
+.setup-step {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.setup-header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  padding: 1rem 0 0.8rem;
+  z-index: 10;
+  text-align: center;
+}
+.setup-header h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0;
+}
+.setup-step-indicator {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.setup-close, .setup-back {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.setup-close:hover, .setup-back:hover {
+  background: var(--card-hover);
+}
+.setup-body {
+  flex: 1;
+  padding: 0.5rem 0;
+}
+.setup-footer {
+  position: sticky;
+  bottom: 0;
+  background: var(--bg);
+  padding: 1rem 0 calc(env(safe-area-inset-bottom) + 1rem);
+}
+
+/* Mode cards */
+.mode-select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+.mode-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--card-border);
+  background: var(--card);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+  width: 100%;
+  color: var(--text);
+}
+.mode-card:hover:not(.disabled) {
+  background: var(--card-hover);
+  border-color: var(--accent);
+}
+.mode-card.selected {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.mode-card.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.mode-icon {
+  font-size: 1.6rem;
+  width: 40px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.mode-info {
+  flex: 1;
+}
+.mode-name {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+.mode-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.type-select-wrap {
+  margin-top: 0.5rem;
+}
+.type-select-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--card-border);
+  background: var(--card);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+  width: 100%;
+  color: var(--text);
+}
+.type-card:hover {
+  background: var(--card-hover);
+}
+.type-card.selected {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+.type-card-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.type-card-desc {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 1px;
+}
+.type-select-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+/* Flashcard screen */
+#flashcard-screen.active {
+  padding: 0 !important;
+  max-width: 100% !important;
+  display: flex !important;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+.flashcard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  flex-shrink: 0;
+}
+.flashcard-counter {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+.flashcard-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+.flashcard-container {
+  perspective: 1200px;
+  width: 100%;
+  max-width: 400px;
+  cursor: pointer;
+}
+.flashcard {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+.flashcard.swiping {
+  transition: none !important;
+}
+.flashcard-front, .flashcard-back {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  min-height: 320px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.flashcard-front {
+  background: var(--card);
+  border: 1.5px solid var(--card-border);
+  box-shadow: var(--shadow-card);
+}
+.flashcard-back {
+  background: linear-gradient(135deg, var(--accent-glow), var(--card));
+  border: 1.5px solid var(--accent);
+  box-shadow: var(--shadow-elevated);
+  transform: rotateY(180deg);
+}
+.flashcard-word {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.flashcard-sentence {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.flashcard-tap-hint {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  opacity: 0.6;
+}
+.flashcard-swipe-hint {
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+  opacity: 0.4;
+  text-align: center;
+  flex-shrink: 0;
+}
+.flashcard-german {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.8rem;
+}
+.flashcard-definition {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.5;
+}
+.flashcard-actions {
+  display: flex;
+  gap: 0.8rem;
+  padding: 1rem;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.flashcard-btn-again {
+  flex: 1;
+  padding: 1rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1.5px solid var(--wrong);
+  background: rgba(220,38,38,0.08);
+  color: var(--wrong);
+  transition: transform 0.1s;
+}
+.flashcard-btn-again:active { transform: scale(0.97); }
+.flashcard-btn-got-it {
+  flex: 1;
+  padding: 1rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1.5px solid var(--correct);
+  background: rgba(22,163,74,0.08);
+  color: var(--correct);
+  transition: transform 0.1s;
+}
+.flashcard-btn-got-it:active { transform: scale(0.97); }
+
+/* Swipe overlay indicators */
+.flashcard-swipe-indicator {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  font-weight: 800;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+}
+.flashcard-swipe-indicator.left {
+  left: 1rem;
+  color: var(--wrong);
+  border: 3px solid var(--wrong);
+  background: rgba(220,38,38,0.1);
+}
+.flashcard-swipe-indicator.right {
+  right: 1rem;
+  color: var(--correct);
+  border: 3px solid var(--correct);
+  background: rgba(22,163,74,0.1);
+}
 /* Duel styles */
 .duel-play-header { text-align: center; padding: 1rem 0; }
 .duel-round-label { font-size: 1.1rem; font-weight: 700; }
@@ -980,7 +1384,6 @@ body.playing .header-container { display: none; }
   font-size: 13px; cursor: pointer; background: transparent;
   border: 1px solid var(--card-border,rgba(255,255,255,0.1)); color: inherit;
 }
-
 </style>
 </head>
 <body>
@@ -993,8 +1396,26 @@ body.playing .header-container { display: none; }
   <p class="header-school">VEHO – Gymnasium und wirtschaftskundliches<br>Realgymnasium der Dominikanerinnen</p>
 </div>
 
+<!-- CLASS SELECTION SCREEN -->
+<div id="section-screen" class="screen active">
+  <div class="login-card">
+    <h2>Select your class</h2>
+    <div class="section-select-wrap">
+      <div class="section-btns" id="section-btns"></div>
+      <div id="section-pin-area" style="display:none;">
+        <div class="section-pin-row">
+          <input type="text" id="section-pin" placeholder="Class PIN" maxlength="20" autocomplete="off">
+          <button class="btn btn-primary" onclick="handleSectionSubmit()">Go</button>
+        </div>
+      </div>
+      <div class="section-error" id="section-error"></div>
+      <button class="btn btn-primary btn-block" id="section-go-btn" style="display:none;" onclick="handleSectionSubmit()">Continue</button>
+    </div>
+  </div>
+</div>
+
 <!-- LOGIN SCREEN -->
-<div id="login-screen" class="screen active">
+<div id="login-screen" class="screen">
   <div class="login-card">
     <h2>Welcome!</h2>
     <!-- Step 1: Name entry -->
@@ -1034,7 +1455,7 @@ body.playing .header-container { display: none; }
       <div class="profile-info">
         <div class="profile-name">
           <span id="welcome-name">Welcome</span>
-          <span class="class-tag" id="profile-class-tag">5B</span>
+          <span class="class-tag" id="profile-class-tag">3A</span>
         </div>
         <div class="profile-xp-row">
           <span class="profile-xp" id="welcome-xp">0 XP</span>
@@ -1043,10 +1464,7 @@ body.playing .header-container { display: none; }
       </div>
       <div class="profile-right">
         <div class="profile-badges" id="badge-row"></div>
-        <div style="display:flex;gap:4px;">
-          <button class="logout-btn" id="sfx-toggle" onclick="toggleSfx()" title="Toggle Sound">🔊</button>
-          <button class="logout-btn" onclick="logout()">Log Out</button>
-        </div>
+        <button class="logout-btn" onclick="logout()">Log Out</button>
       </div>
     </div>
     <div class="profile-xp-bar" id="rank-display" style="display:none;">
@@ -1062,76 +1480,49 @@ body.playing .header-container { display: none; }
     <div class="stat-card"><div class="stat-value" id="stat-streak">0</div><div class="stat-label">Streak 🔥</div></div>
   </div>
 
-
-
-  <div class="daily-card" id="daily-card">
-    <div class="daily-card-header">
-      <span class="daily-card-title">⚡ Daily Challenge</span>
-      <span class="daily-card-date" id="daily-date"></span>
+  <div class="today-card" id="today-card" style="display:none;">
+    <div class="today-section">
+      <div class="today-header">
+        <span class="today-label">📝 Word of the Day</span>
+        <span class="today-source" id="wotd-source"></span>
+      </div>
+      <div class="today-wotd">
+        <span class="today-word" id="wotd-word"></span>
+        <span class="today-german" id="wotd-german"></span>
+      </div>
+      <div class="today-def" id="wotd-def"></div>
     </div>
-    <div class="daily-card-desc">10 words · same for everyone today</div>
-    <div id="daily-action"></div>
-  </div>
-
-  <div id="wotd-card" style="display:none;">
-    <h3>📖 Word of the Day</h3>
-    <div id="wotd-word"></div>
-    <div id="wotd-german"></div>
-    <div id="wotd-def"></div>
-    <div id="wotd-sentence"></div>
-  </div>
-
-  <div id="weekly-goal" style="display:none;">
-    <h3>🎯 Weekly Class Goal</h3>
-    <div id="wg-track"><div id="wg-fill" style="width:0%;"></div></div>
-    <div id="wg-label"><span id="wg-current">0 XP</span><span id="wg-target"></span></div>
-  </div>
-
-  <div class="card">
-    <h3>Select Sources</h3>
-    <div class="source-section">
-      <div class="source-section-label list-label">📝 Word Lists</div>
-      <div class="source-grid" id="source-grid-lists"></div>
-    </div>
-    <div class="source-section">
-      <div class="source-section-label unit-label">📘 way2go! 5 Units</div>
-      <div class="source-grid" id="source-grid-units"></div>
-    </div>
-    <div class="quick-btns">
-      <button class="quick-btn" onclick="selectAll('list')">All Lists</button>
-      <button class="quick-btn" onclick="selectAll('unit')">All Units</button>
-      <button class="quick-btn" onclick="selectAll('all')">Everything</button>
-      <button class="quick-btn" onclick="selectAll('none')">Clear</button>
+    <div class="today-divider"></div>
+    <div class="today-section">
+      <div class="today-header">
+        <span class="today-label">⚡ Daily Challenge</span>
+        <span class="today-date" id="daily-date"></span>
+      </div>
+      <div class="today-daily-desc">10 words · same for everyone today</div>
+      <div id="daily-action"></div>
     </div>
   </div>
 
-  <div class="card">
-    <h3>Exercise Type</h3>
-    <div class="type-grid" id="type-grid">
-      <button class="type-btn selected" data-type="mix" onclick="selectType(this)" title="Random mix of all exercise types">Mix</button>
-      <button class="type-btn" data-type="context" onclick="selectType(this)" title="Complete the sentence — first letter + exact letter count shown">Context (easy)</button>
-      <button class="type-btn" data-type="context-hard" onclick="selectType(this)" title="Complete the sentence — only the first letter is shown, no letter count">Context (hard)</button>
-      <button class="type-btn" data-type="definition" onclick="selectType(this)" title="Read an English definition — first letters and word count shown">Definition (easy)</button>
-      <button class="type-btn" data-type="definition-hard" onclick="selectType(this)" title="Read an English definition — no hints given">Definition (hard)</button>
-      <button class="type-btn" data-type="translation" onclick="selectType(this)" title="See the German word and type the English translation">Translation</button>
-      <button class="type-btn" data-type="multiple-choice" onclick="selectType(this)" title="Choose the correct answer from 4 options">Multiple Choice</button>
+  <div id="weekly-goal-card" style="display:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+      <span style="font-weight:800;font-size:0.85rem;color:var(--correct);">🎯 Weekly Class Goal</span>
+      <span id="weekly-goal-label" style="font-size:0.68rem;color:var(--muted);"></span>
     </div>
+    <div style="height:10px;background:rgba(255,255,255,0.08);border-radius:5px;overflow:hidden;margin-bottom:4px;">
+      <div id="weekly-goal-fill" style="height:100%;background:linear-gradient(90deg,var(--correct),#4ade80);border-radius:5px;transition:width 0.6s ease;width:0%;"></div>
+    </div>
+    <div id="weekly-goal-text" style="font-size:0.75rem;color:var(--text-secondary);text-align:center;"></div>
   </div>
-
-  <div class="word-count-display" id="word-count">Select sources to begin</div>
 
   <div class="home-actions">
-    <button class="btn btn-primary btn-block" id="start-btn" disabled onclick="startPractice()">Full Practice</button>
-    <div class="mode-row">
-      <button class="btn btn-sprint" id="sprint-btn" disabled onclick="startSprint()">🏃 Sprint (10)</button>
-      <button class="btn btn-speed" id="speed-btn" disabled onclick="startSpeedRound()">⚡ Speed Round</button>
-    </div>
-    <button class="btn-battle" onclick="openBattleLobby()">⚔️ 1v1 Battle</button>
+    <button class="btn btn-primary btn-block btn-start-practice" onclick="openPracticeSetup()">🎯 Start Practice</button>
     <button class="btn btn-review btn-block btn-small" id="review-btn" style="display:none;" onclick="startSmartReview()">🔄 Smart Review</button>
+    <button id="btn-battle" class="btn-battle" onclick="openBattleLobby()" style="display:none;">⚔️ Battle</button>
     <div class="home-actions-row">
-      <button class="btn btn-secondary btn-small" onclick="showProgressScreen()">📊 My Progress</button>
+      <button class="btn btn-secondary btn-small" onclick="showProgressScreen()">📊 Progress</button>
       <button class="btn btn-secondary btn-small" onclick="showLeaderboard()">🏆 Leaderboard</button>
-      <button class="btn btn-secondary btn-small" onclick="showWordReference()">📖 Word Reference</button>
+      <button class="btn btn-secondary btn-small" onclick="showWordReference()">📖 Words</button>
+      <button id="sfx-toggle-btn" onclick="toggleSfx()" style="font-size:13px;padding:8px 16px;border-radius:10px;cursor:pointer;background:var(--card);border:1px solid var(--card-border);color:var(--text);">🔊</button>
     </div>
   </div>
 </div>
@@ -1212,6 +1603,32 @@ body.playing .header-container { display: none; }
     <div id="level-roadmap"></div>
   </div>
 
+  <div class="card" id="battle-stats-card" style="display:none;">
+    <h3>⚔️ Battle Stats</h3>
+    <div class="progress-overall" style="margin-bottom:12px;">
+      <div class="stat-card">
+        <div class="stat-value" id="bs-played">0</div>
+        <div class="stat-label">Played</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="bs-won" style="color:var(--correct)">0</div>
+        <div class="stat-label">Won</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="bs-winrate">–</div>
+        <div class="stat-label">Win Rate</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="bs-xp" style="color:#f59e0b">0</div>
+        <div class="stat-label">Battle XP</div>
+      </div>
+    </div>
+    <div id="battle-history-toggle" style="cursor:pointer;font-size:13px;opacity:0.6;text-align:center;padding:8px;" onclick="toggleBattleHistory()">
+      ▼ Recent battles
+    </div>
+    <div id="battle-history-list" style="display:none;"></div>
+  </div>
+
   <div class="card">
     <h3>By Source</h3>
     <div class="source-progress-list" id="source-progress-list"></div>
@@ -1267,21 +1684,72 @@ body.playing .header-container { display: none; }
 
 <!-- BATTLE SCREEN -->
 <div id="battle-screen" class="screen">
+  <div style="max-width:520px;margin:0 auto;padding:16px;width:100%;">
+    <div id="battle-header" style="text-align:center;margin-bottom:16px;">
+      <div id="battle-mode-label" style="font-size:12px;opacity:0.4;margin-bottom:2px;"></div>
+      <div id="battle-round-num" style="font-size:13px;opacity:0.5;text-transform:uppercase;letter-spacing:1px;">Round 1 of 5</div>
+    </div>
+    <div id="battle-scores" style="margin-bottom:16px;"></div>
+    <div id="battle-area" style="padding:24px;text-align:center;position:relative;">
+      <div id="battle-countdown" style="display:none;"></div>
+      <div id="battle-prompt" style="margin-bottom:16px;"></div>
+      <input type="text" id="battle-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type your answer..." style="width:100%;padding:12px 16px;border-radius:10px;font-size:16px;text-align:center;box-sizing:border-box;" onkeydown="if(event.key==='Enter')submitBattleAnswer(this.value)">
+      <div id="battle-feedback" style="margin-top:12px;font-size:15px;font-weight:600;min-height:24px;"></div>
+      <div id="battle-timer-bar" style="margin-top:12px;height:4px;border-radius:2px;overflow:hidden;"><div id="battle-timer-fill" style="height:100%;border-radius:2px;width:100%;"></div></div>
+    </div>
+    <div style="text-align:center;margin-top:16px;">
+      <button onclick="leaveBattle()" style="font-size:13px;opacity:0.5;background:none;border:none;cursor:pointer;text-decoration:underline;color:var(--text);">Forfeit &amp; leave</button>
+    </div>
+  </div>
+</div>
+
+<!-- DUEL HUB SCREEN -->
+<div id="duel-hub-screen" class="screen">
   <div class="progress-nav">
-    <button class="btn btn-secondary" onclick="leaveBattle()">← Leave</button>
+    <button class="btn btn-secondary" onclick="goHome()">← Back</button>
+    <h2 style="flex:1;text-align:center;margin:0;">Quiz Duels</h2>
+    <div style="width:60px;"></div>
   </div>
-  <div style="text-align:center;margin-bottom:12px;">
-    <div style="font-size:13px;opacity:0.5;text-transform:uppercase;letter-spacing:0.1em;" id="battle-round-num">Round 1 of 10</div>
+  <div class="card">
+    <button class="btn btn-primary btn-block" onclick="openDuelChallenge()">⚔️ Challenge Someone</button>
   </div>
-  <div id="battle-scores" style="margin-bottom:16px;"></div>
-  <div class="card" style="margin-bottom:16px;">
-    <div id="battle-countdown" style="display:none;"></div>
-    <div id="battle-prompt"></div>
-    <input type="text" id="battle-input" placeholder="Type your answer..." autocomplete="off" autocapitalize="off" style="display:none;margin-top:12px;"
-      onkeydown="if(event.key==='Enter'&&!state.battleAnswered){submitBattleAnswer(this.value);}">
-    <div id="battle-feedback" style="margin-top:10px;font-size:14px;font-weight:600;text-align:center;min-height:20px;"></div>
+  <div id="duel-list"></div>
+</div>
+
+<!-- DUEL SCOREBOARD SCREEN -->
+<div id="duel-scoreboard-screen" class="screen">
+  <div class="progress-nav">
+    <button class="btn btn-secondary" onclick="openDuelHub()">← Back</button>
   </div>
-  <div id="battle-area"></div>
+  <div id="duel-scoreboard"></div>
+</div>
+
+<!-- DUEL UNIT PICKER SCREEN -->
+<div id="duel-pick-screen" class="screen">
+  <div style="text-align:center;padding:1rem 0;">
+    <h2>Pick a Unit</h2>
+    <p style="color:var(--muted);font-size:0.85rem;">Choose the topic for Round <span id="duel-pick-round">1</span></p>
+  </div>
+  <div class="source-grid" id="duel-unit-grid"></div>
+</div>
+
+<!-- DUEL PLAY SCREEN -->
+<div id="duel-play-screen" class="screen">
+  <div class="duel-play-header">
+    <div class="duel-round-label" id="duel-round-label">Round 1 · Unit 3</div>
+    <div class="duel-question-num" id="duel-question-num">Question 1 of 5</div>
+  </div>
+  <div class="duel-timer-bar" id="duel-timer-bar">
+    <div class="duel-timer-fill" id="duel-timer-fill"></div>
+  </div>
+  <div class="duel-question-area" id="duel-question-area">
+    <div class="duel-prompt" id="duel-prompt"></div>
+    <div class="duel-options" id="duel-options"></div>
+  </div>
+  <div id="duel-round-summary" style="display:none;" class="card">
+    <div id="duel-round-summary-content"></div>
+    <button class="btn btn-primary btn-block" id="duel-continue-btn" onclick="duelContinueAfterRound()">Continue</button>
+  </div>
 </div>
 
 <!-- RESULTS SCREEN -->
@@ -1303,6 +1771,37 @@ body.playing .header-container { display: none; }
   </div>
 </div>
 
+<!-- FLASHCARD SCREEN -->
+<div id="flashcard-screen" class="screen">
+  <div class="flashcard-header">
+    <button class="btn btn-secondary btn-small" onclick="endFlashcards()">&larr; Done</button>
+    <div class="flashcard-counter" id="flashcard-counter">0 remaining</div>
+  </div>
+  <div class="flashcard-stage" id="flashcard-stage">
+    <div class="flashcard-swipe-indicator left" id="swipe-indicator-left">&#10007;</div>
+    <div class="flashcard-swipe-indicator right" id="swipe-indicator-right">&#10003;</div>
+    <div class="flashcard-container" id="flashcard-container">
+      <div class="flashcard" id="flashcard">
+        <div class="flashcard-front" id="flashcard-front">
+          <div class="flashcard-word" id="fc-front-word"></div>
+          <div class="flashcard-sentence" id="fc-front-detail"></div>
+          <div class="flashcard-tap-hint">Tap to flip</div>
+        </div>
+        <div class="flashcard-back" id="flashcard-back">
+          <div class="flashcard-word" id="fc-back-word"></div>
+          <div class="flashcard-sentence" id="fc-back-detail"></div>
+          <div class="flashcard-tap-hint" style="opacity:0.4;">Tap to flip back</div>
+        </div>
+      </div>
+    </div>
+    <div class="flashcard-swipe-hint">swipe &rarr; Got it &nbsp;·&nbsp; swipe &larr; Study again</div>
+  </div>
+  <div class="flashcard-actions" id="flashcard-actions">
+    <button class="btn flashcard-btn-again" onclick="flashcardAgain()">&#10007; Study again</button>
+    <button class="btn flashcard-btn-got-it" onclick="flashcardGotIt()">&#10003; Got it</button>
+  </div>
+</div>
+
 <script>
 // ===== FIREBASE =====
 firebase.initializeApp({
@@ -1315,9 +1814,23 @@ firebase.initializeApp({
   appId: "1:623091115688:web:8c8fcbc87a623056d8449d"
 });
 const db = firebase.firestore();
-const CLASS_ID = '5B';
-const classRef = db.collection('classes').doc(CLASS_ID);
-const studentsRef = classRef.collection('students');
+
+const SECTIONS = [
+  { id: '5B', label: '5B', pin: '' },
+];
+const GRADE_LABEL = '5B';
+const LS_KEY = '5b-vocab-student';
+
+let CLASS_ID = null;
+let classRef = null;
+let studentsRef = null;
+
+function setClassId(id) {
+  CLASS_ID = id;
+  classRef = db.collection('classes').doc(CLASS_ID);
+  studentsRef = classRef.collection('students');
+  if (typeof initBattleRefs === 'function') initBattleRefs();
+}
 
 // ===== VOCABULARY DATA =====
 const vocabData = {
@@ -1668,7 +2181,7 @@ async function getAvailableAvatar() {
 }
 
 function updateAllAvatars() {
-  const els = ['home-avatar','practice-avatar','results-avatar'];
+  const els = ['home-avatar','profile-avatar','practice-avatar','results-avatar'];
   for (const id of els) {
     const el = document.getElementById(id);
     if (el && state.avatarId) { el.src = avatarSrc(state.avatarId); el.alt = AVATAR_NAMES[state.avatarId - 1] || ''; el.style.display = ''; }
@@ -1722,24 +2235,17 @@ let state = {
   score: 0,
   answered: false,
   results: [],
-  comboStreak: 0, comboMult: 1, comboMax: 0,
   currentType: null,
   avatarId: null,
+  comboStreak: 0, comboMult: 1, comboMax: 0,
+  battleRoom: null, battleRole: null, battleData: null, battleRound: 0, battleAnswered: false,
+  _inviteListener: null, _inviteChangeListener: null, _roomListener: null, _battleRoundTimer: null,
   isSprint: false,
   isSpeedRound: false,
   isMultipleChoice: false,
   speedTimer: null,
   speedTimeLeft: 60,
   sprintCount: 0,
-  battleRoom: null,
-  battleRole: null,
-  battleData: null,
-  battleRound: 0,
-  battleAnswered: false,
-  _roomListener: null,
-  _inviteListener: null,
-  _inviteChangeListener: null,
-  _battleRoundTimer: null,
 };
 
 // ===== GAMIFICATION =====
@@ -1802,7 +2308,7 @@ function updateRankDisplay() {
   const badge = document.getElementById('rank-badge');
   if (badge) {
     badge.className = 'profile-rank-pill zone-' + lv.zone;
-    badge.textContent = 'Lv ' + lv.level + ' \u00B7 ' + lv.name;
+    badge.textContent = 'Lv ' + lv.level + ' · ' + lv.name;
     badge.style.display = '';
   }
   const cl = document.getElementById('rank-current-label');
@@ -1817,7 +2323,7 @@ function updateRankDisplay() {
     fill.style.background = 'linear-gradient(90deg, ' + (zoneColors[lv.zone] || 'var(--accent)') + ', ' + (zoneColors[lv.zone] || 'var(--accent)') + 'cc)';
   }
   const xpToNext = lv.next ? (lv.next.xp - xp) : 0;
-  if (xtn) xtn.textContent = lv.next ? xpToNext.toLocaleString() + ' XP to next' : '\u2728 Max level!';
+  if (xtn) xtn.textContent = lv.next ? xpToNext.toLocaleString() + ' XP to next' : '✨ Max level!';
 }
 
 function renderLevelRoadmap() {
@@ -1867,59 +2373,98 @@ function showComboLost() {
 
 function showLevelUpQueue(levels) {
   if (!levels || levels.length === 0) return;
-  const lv = levels[0]; const remaining = levels.slice(1);
+  const lv = levels[0];
+  const remaining = levels.slice(1);
+
   SFX.play('levelup');
+
   const overlay = document.createElement('div');
   overlay.id = 'level-up-overlay';
   overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:10000;animation:fadeIn 0.3s ease;';
-  const zc = ZONE_COLORS[lv.zone]; const card = document.createElement('div');
+
+  const zc = ZONE_COLORS[lv.zone];
+  const card = document.createElement('div');
   card.style.cssText = `background:linear-gradient(145deg,${zc.bg},${zc.accent});border-radius:20px;padding:32px 40px;text-align:center;color:#fff;max-width:320px;animation:popIn 0.4s cubic-bezier(0.175,0.885,0.32,1.275);`;
-  const moreText = remaining.length > 0 ? `<div style="font-size:11px;opacity:0.6;margin-top:12px;">${remaining.length} more...</div>` : '';
-  card.innerHTML = `<div style="font-size:42px;margin-bottom:8px;">⚔️</div><div style="font-size:13px;text-transform:uppercase;letter-spacing:2px;opacity:0.8;">Level Up!</div><div style="font-size:28px;font-weight:700;margin:8px 0 4px;">Lv ${lv.level}</div><div style="font-size:20px;font-weight:600;margin-bottom:4px;">${lv.name}</div><div style="font-size:13px;opacity:0.7;font-style:italic;margin-bottom:20px;">${lv.vibe}</div><div style="display:inline-block;padding:4px 16px;border-radius:12px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;background:rgba(255,255,255,0.2);">${lv.zone} zone</div>${moreText}<div style="margin-top:20px;"><button onclick="this.closest('#level-up-overlay').remove();showLevelUpQueue(window._levelUpQueue);" style="background:rgba(255,255,255,0.25);color:#fff;border:none;padding:10px 28px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;">${remaining.length > 0 ? 'Next →' : 'Nice!'}</button></div>`;
+
+  const moreText = remaining.length > 0 ? `<div style="font-size:11px;opacity:0.6;margin-top:12px;">${remaining.length} more level-up${remaining.length > 1 ? 's' : ''}...</div>` : '';
+
+  card.innerHTML = `
+    <div style="font-size:42px;margin-bottom:8px;">\u2694\uFE0F</div>
+    <div style="font-size:13px;text-transform:uppercase;letter-spacing:2px;opacity:0.8;">Level Up!</div>
+    <div style="font-size:28px;font-weight:700;margin:8px 0 4px;">Lv ${lv.level}</div>
+    <div style="font-size:20px;font-weight:600;margin-bottom:4px;">${lv.name}</div>
+    <div style="font-size:13px;opacity:0.7;font-style:italic;margin-bottom:20px;">${lv.vibe}</div>
+    <div style="display:inline-block;padding:4px 16px;border-radius:12px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;background:rgba(255,255,255,0.2);">${lv.zone} zone</div>
+    ${moreText}
+    <div style="margin-top:20px;">
+      <button onclick="this.closest('#level-up-overlay').remove();showLevelUpQueue(window._levelUpQueue);" style="background:rgba(255,255,255,0.25);color:#fff;border:none;padding:10px 28px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;">${remaining.length > 0 ? 'Next \u2192' : 'Nice!'}</button>
+    </div>
+  `;
+
   window._levelUpQueue = remaining;
-  overlay.appendChild(card); document.body.appendChild(overlay);
+  overlay.appendChild(card);
+  document.body.appendChild(overlay);
 }
 
 // ===== SOUND EFFECTS =====
 const SFX = {
-  ctx: null, enabled: true,
+  ctx: null,
+  enabled: true,
   init() {
-    this.enabled = localStorage.getItem('5b-sfx') !== 'off';
-    document.addEventListener('pointerdown', () => {
-      if (!this.ctx) this.ctx = new (window.AudioContext || window.webkitAudioContext)();
-    }, { once: true });
+    if (this.ctx) return;
+    try { this.ctx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e) { console.warn('SFX: no AudioContext'); }
   },
-  play(name) {
+  play(type) {
     if (!this.enabled || !this.ctx) return;
-    const c = this.ctx, t = c.currentTime;
-    try {
-      if (name === 'correct') {
-        const o = c.createOscillator(), g = c.createGain();
-        o.type = 'sine'; o.frequency.setValueAtTime(880, t); o.frequency.setValueAtTime(1108, t + 0.08);
-        g.gain.setValueAtTime(0.12, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.2);
-        o.connect(g); g.connect(c.destination); o.start(t); o.stop(t + 0.2);
-      } else if (name === 'wrong') {
-        const o = c.createOscillator(), g = c.createGain();
-        o.type = 'sawtooth'; o.frequency.setValueAtTime(280, t); o.frequency.setValueAtTime(200, t + 0.15);
-        g.gain.setValueAtTime(0.08, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.25);
-        o.connect(g); g.connect(c.destination); o.start(t); o.stop(t + 0.25);
-      } else if (name === 'levelup') {
-        [0, 0.1, 0.2, 0.35].forEach((d, i) => {
-          const o = c.createOscillator(), g = c.createGain();
-          o.type = 'sine'; o.frequency.setValueAtTime([523, 659, 784, 1047][i], t + d);
-          g.gain.setValueAtTime(0.1, t + d); g.gain.exponentialRampToValueAtTime(0.001, t + d + 0.2);
-          o.connect(g); g.connect(c.destination); o.start(t + d); o.stop(t + d + 0.2);
-        });
-      } else if (name === 'click') {
-        const o = c.createOscillator(), g = c.createGain();
-        o.type = 'sine'; o.frequency.setValueAtTime(600, t);
-        g.gain.setValueAtTime(0.06, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.06);
-        o.connect(g); g.connect(c.destination); o.start(t); o.stop(t + 0.06);
-      }
-    } catch(e) {}
-  },
-  toggle() { this.enabled = !this.enabled; localStorage.setItem('5b-sfx', this.enabled ? 'on' : 'off'); }
+    if (this.ctx.state === 'suspended') this.ctx.resume();
+    const t = this.ctx.currentTime;
+    const g = this.ctx.createGain();
+    g.connect(this.ctx.destination);
+    const o = this.ctx.createOscillator();
+    o.connect(g);
+    switch(type) {
+      case 'correct':
+        o.type = 'sine'; o.frequency.setValueAtTime(523.25, t); o.frequency.setValueAtTime(659.25, t+0.08);
+        g.gain.setValueAtTime(0.18, t); g.gain.exponentialRampToValueAtTime(0.001, t+0.25);
+        o.start(t); o.stop(t+0.25); break;
+      case 'wrong':
+        o.type = 'square'; o.frequency.setValueAtTime(200, t); o.frequency.setValueAtTime(160, t+0.12);
+        g.gain.setValueAtTime(0.12, t); g.gain.exponentialRampToValueAtTime(0.001, t+0.3);
+        o.start(t); o.stop(t+0.3); break;
+      case 'levelup':
+        o.type = 'sine';
+        o.frequency.setValueAtTime(523.25, t);
+        o.frequency.setValueAtTime(659.25, t+0.1);
+        o.frequency.setValueAtTime(783.99, t+0.2);
+        o.frequency.setValueAtTime(1046.5, t+0.3);
+        g.gain.setValueAtTime(0.2, t); g.gain.exponentialRampToValueAtTime(0.001, t+0.6);
+        o.start(t); o.stop(t+0.6); break;
+      case 'combo':
+        o.type = 'triangle'; o.frequency.setValueAtTime(440, t); o.frequency.setValueAtTime(554.37, t+0.06); o.frequency.setValueAtTime(659.25, t+0.12);
+        g.gain.setValueAtTime(0.15, t); g.gain.exponentialRampToValueAtTime(0.001, t+0.2);
+        o.start(t); o.stop(t+0.2); break;
+      case 'badge':
+        o.type = 'sine';
+        o.frequency.setValueAtTime(392, t);
+        o.frequency.setValueAtTime(523.25, t+0.15);
+        o.frequency.setValueAtTime(659.25, t+0.3);
+        g.gain.setValueAtTime(0.2, t); g.gain.exponentialRampToValueAtTime(0.001, t+0.5);
+        o.start(t); o.stop(t+0.5); break;
+      case 'click':
+        o.type = 'sine'; o.frequency.setValueAtTime(800, t);
+        g.gain.setValueAtTime(0.06, t); g.gain.exponentialRampToValueAtTime(0.001, t+0.05);
+        o.start(t); o.stop(t+0.05); break;
+      default: return;
+    }
+  }
 };
+
+function toggleSfx() {
+  SFX.enabled = !SFX.enabled;
+  const btn = document.getElementById('sfx-toggle-btn');
+  if (btn) btn.textContent = SFX.enabled ? '\uD83D\uDD0A Sound: ON' : '\uD83D\uDD07 Sound: OFF';
+  localStorage.setItem('sfx-enabled', SFX.enabled ? '1' : '0');
+}
 
 const XP_TABLE = { 'context': 5, 'context-hard': 8, 'definition': 6, 'definition-hard': 10, 'translation': 7, 'mc-context': 3, 'mc-definition': 4, 'mc-translation': 5 };
 const BADGE_DEFS = [
@@ -1929,7 +2474,7 @@ const BADGE_DEFS = [
   { id:'mastered-10', icon:'🧠', name:'Quick Learner', desc:'Master 10 words', check:(d,m)=>m>=10 },
   { id:'mastered-50', icon:'📚', name:'Word Collector', desc:'Master 50 words', check:(d,m)=>m>=50 },
   { id:'mastered-100', icon:'🏆', name:'Vocabulary Champion', desc:'Master 100 words', check:(d,m)=>m>=100 },
-  { id:'mastered-all', icon:'👑', name:'Master of All', desc:'Master every single word', check:(d,m)=>{ let t=0; for(const s of Object.values(vocabData)) t+=s.length; return m>=t; }  },
+  { id:'mastered-all', icon:'👑', name:'Master of All', desc:'Master every single word', check:(d,m)=>{ let t=0; for(const s of Object.values(vocabData)) t+=s.length; return m>=t; }},
   { id:'perfect-round', icon:'💯', name:'Flawless', desc:'Score 10/10 or higher in one round', check:(d,m,r)=>r&&r.length>=10&&r.every(x=>x.correct) },
   { id:'streak-3', icon:'🔥', name:'3-Day Streak', desc:'Practice 3 days in a row', check:(d)=>(d.streak||0)>=3 },
   { id:'streak-7', icon:'⚡', name:'Weekly Warrior', desc:'Practice 7 days in a row', check:(d)=>(d.streak||0)>=7 },
@@ -2033,7 +2578,7 @@ function renderBadgeRow() {
   }
   row.innerHTML = earned.map(id => {
     const b = BADGE_DEFS.find(x => x.id === id);
-    return b ? '<div class="badge-icon" onclick="showBadgeModal()" title="' + b.name + '">' + b.icon + '</div>' : '';
+    return b ? `<div class="badge-icon" onclick="showBadgeModal()" title="${b.name}">${b.icon}</div>` : '';
   }).join('');
 }
 
@@ -2042,18 +2587,19 @@ function showBadgeModal() {
   const earned = state.studentData?.badges || [];
   list.innerHTML = BADGE_DEFS.map(b => {
     const has = earned.includes(b.id);
-    return '<div class="badge-item ' + (has ? '' : 'locked') + '"><div class="badge-item-icon">' + b.icon + '</div><div class="badge-item-info"><div class="badge-item-name">' + (has ? b.name : '???') + '</div><div class="badge-item-desc">' + b.desc + '</div></div></div>';
+    return `<div class="badge-item ${has ? '' : 'locked'}"><div class="badge-item-icon">${b.icon}</div><div class="badge-item-info"><div class="badge-item-name">${has ? b.name : '???'}</div><div class="badge-item-desc">${b.desc}</div></div></div>`;
   }).join('');
   document.getElementById('badge-modal').classList.add('show');
 }
 
 function renderDailyCard() {
   const today = getTodayStr();
-  document.getElementById('daily-date').textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
-  const log = state.studentData?.dailyChallengeLog || {};
+  const dateEl = document.getElementById('daily-date');
   const actionEl = document.getElementById('daily-action');
+  dateEl.textContent = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  const log = state.studentData?.dailyChallengeLog || {};
   if (log[today]) {
-    actionEl.innerHTML = '<div class="daily-card-done">✅ Done today: ' + log[today].score + '/' + log[today].total + ' (' + log[today].pct + '%)</div>';
+    actionEl.innerHTML = `<div class="daily-card-done">✅ Done today: ${log[today].score}/${log[today].total} (${log[today].pct}%)</div>`;
   } else {
     actionEl.innerHTML = '<button class="btn-daily" onclick="startDailyChallenge()">Start Challenge</button>';
   }
@@ -2082,10 +2628,11 @@ async function saveDailyChallengeResult() {
   const total = state.words.length;
   const pct = Math.round((score / total) * 100);
   await studentsRef.doc(state.studentId).update({
-    ['dailyChallengeLog.' + today]: { score: score, total: total, pct: pct }
+    [`dailyChallengeLog.${today}`]: { score, total, pct }
   });
   if (!state.studentData.dailyChallengeLog) state.studentData.dailyChallengeLog = {};
-  state.studentData.dailyChallengeLog[today] = { score: score, total: total, pct: pct };
+  state.studentData.dailyChallengeLog[today] = { score, total, pct };
+  // Daily challenge bonus XP
   let bonusXP = 15;
   if (pct === 100) bonusXP += 30;
   await studentsRef.doc(state.studentId).update({
@@ -2096,32 +2643,51 @@ async function saveDailyChallengeResult() {
 
 async function showLeaderboard() {
   showScreen('leaderboard-screen');
-  const snapshot = await studentsRef.get();
-  const students = [];
-  snapshot.forEach(doc => {
-    const d = doc.data();
-    students.push({ id: doc.id, name: d.name, xp: d.xp || 0, daily: d.dailyChallengeLog || {}, avatarId: d.avatarId || 1 });
-  });
-  students.sort((a, b) => b.xp - a.xp);
+  const mySection = SECTIONS.find(s => s.id === CLASS_ID);
+  const myLabel = mySection ? mySection.label : CLASS_ID;
+
+  // Load all sections for cross-class leaderboard
+  const allStudents = [];
+  for (const sec of SECTIONS) {
+    try {
+      const snap = await db.collection('classes').doc(sec.id).collection('students').get();
+      snap.forEach(doc => {
+        const d = doc.data();
+        allStudents.push({ id: doc.id, name: d.name, xp: d.xp || 0, daily: d.dailyChallengeLog || {}, section: sec.label, sectionId: sec.id, avatarId: d.avatarId || 1 });
+      });
+    } catch (e) { /* section may not exist yet */ }
+  }
+
+  // My class leaderboard
+  const myStudents = allStudents.filter(s => s.sectionId === CLASS_ID);
+  myStudents.sort((a, b) => b.xp - a.xp);
   const medals = ['🥇', '🥈', '🥉'];
-  document.getElementById('lb-main').innerHTML = students.map((s, i) => {
-    const isMe = s.id === state.studentId;
-    const rank = i < 3 ? medals[i] : (i + 1) + '.';
+  const renderRows = (list, showSection) => list.map((s, i) => {
+    const isMe = s.id === state.studentId && s.sectionId === CLASS_ID;
+    const rank = i < 3 ? medals[i] : `${i + 1}.`;
+    const tag = showSection ? ` <span class="section-tag section-tag-${s.section.toLowerCase()}">${s.section}</span>` : '';
     const av = `<img src="${avatarSrc(s.avatarId)}" class="avatar avatar-sm" style="vertical-align:middle;margin-right:6px;">`;
     const sLv = getLevel(s.xp);
     const rankPill = `<span class="rank-pill zone-${sLv.zone}" style="font-size:10px;padding:2px 8px;border-radius:10px;margin-left:6px;font-weight:600;">${sLv.name}</span>`;
-    return '<div class="lb-row ' + (isMe ? 'me' : '') + '"><span class="lb-rank">' + rank + '</span><span class="lb-name">' + av + s.name + rankPill + (isMe ? ' ← you' : '') + '</span><span class="lb-xp">' + s.xp.toLocaleString() + ' XP</span></div>';
+    return `<div class="lb-row ${isMe ? 'me' : ''}"><span class="lb-rank">${rank}</span><span class="lb-name">${av}${s.name}${rankPill}${tag}${isMe ? ' ← you' : ''}</span><span class="lb-xp">${s.xp.toLocaleString()} XP</span></div>`;
   }).join('') || '<p style="color:var(--muted);text-align:center;padding:1rem;">No students yet</p>';
+
+  document.getElementById('lb-main').innerHTML =
+    `<div style="font-size:0.75rem;font-weight:700;color:var(--accent-light);margin-bottom:0.5rem;text-transform:uppercase;">My Class (${myLabel})</div>` +
+    renderRows(myStudents, false) +
+    `<div style="font-size:0.75rem;font-weight:700;color:var(--accent-light);margin:1rem 0 0.5rem;text-transform:uppercase;border-top:1px solid var(--card-border);padding-top:0.8rem;">All Classes</div>` +
+    renderRows([...allStudents].sort((a, b) => b.xp - a.xp), true);
+
+  // Daily challenge leaderboard (my class only)
   const today = getTodayStr();
-  const dailyStudents = students.filter(s => s.daily[today]).map(s => ({ ...s, ...s.daily[today] })).sort((a, b) => b.score - a.score);
+  const dailyStudents = myStudents.filter(s => s.daily[today]).map(s => ({ ...s, ...s.daily[today] })).sort((a, b) => b.score - a.score);
   document.getElementById('lb-daily').innerHTML = dailyStudents.map((s, i) => {
     const isMe = s.id === state.studentId;
-    return '<div class="lb-row ' + (isMe ? 'me' : '') + '"><span class="lb-rank">' + (i + 1) + '.</span><span class="lb-name">' + s.name + '</span><span class="lb-score">' + s.score + '/' + s.total + '</span></div>';
+    return `<div class="lb-row ${isMe ? 'me' : ''}"><span class="lb-rank">${i + 1}.</span><span class="lb-name">${s.name}</span><span class="lb-score">${s.score}/${s.total}</span></div>`;
   }).join('') || "<p style=\"color:var(--muted);text-align:center;padding:0.5rem;font-size:0.85rem;\">No one has done today's challenge yet</p>";
 }
 
-function getSmartReviewWords(limit) {
-  limit = limit || 20;
+function getSmartReviewWords(limit = 20) {
   const candidates = [];
   for (const [src, entries] of Object.entries(vocabData)) {
     const slug = slugify(src);
@@ -2131,14 +2697,30 @@ function getSmartReviewWords(limit) {
       const p = prog.words[entry.w];
       if (!p) continue;
       const c = p.c || 0, w = p.w || 0;
-      if (c >= 3 && c > w) continue;
+      if (c >= 3 && c > w && (p.interval || 0) >= 14) continue; // fully mastered
       let priority = 0;
+      let reason = '';
       const total = c + w;
+      // Spaced repetition: overdue words get highest priority
+      if (p.dueDate && new Date(p.dueDate) <= new Date()) {
+        priority += 15;
+        reason = 'Due for review';
+      }
+      // Not seen in a long time
+      if (p.lastSeen) {
+        const daysSince = Math.floor((Date.now() - new Date(p.lastSeen).getTime()) / 86400000);
+        if (daysSince > 14) {
+          priority += daysSince / 7;
+          if (!reason) reason = 'Not seen in ' + daysSince + ' days';
+        }
+      }
       if (total > 0) priority += (w / total) * 10;
       priority += Math.min(w, 5);
-      if (c === 2 && w <= 1) priority += 3;
-      if (total >= 5 && w >= c) priority += 4;
-      if (priority > 0) candidates.push({ ...entry, source: src, priority: priority });
+      if (c === 2 && w <= 1) { priority += 3; if (!reason) reason = 'Almost mastered'; }
+      if (total >= 5 && w >= c) { priority += 4; if (!reason) reason = 'Got wrong ' + w + '\u00d7'; }
+      if (!reason && w > 0) reason = 'Got wrong ' + w + '\u00d7';
+      if (!reason) reason = 'Needs practice';
+      if (priority > 0) candidates.push({ ...entry, source: src, priority, reason });
     }
   }
   candidates.sort((a, b) => b.priority - a.priority);
@@ -2297,9 +2879,11 @@ async function handlePinSubmit() {
     }
     // PIN correct — log in
     state.studentData = data;
+    // Assign avatar to legacy students who don't have one
     if (!data.avatarId) {
       const newAv = await getAvailableAvatar();
-      state.avatarId = newAv; state.studentData.avatarId = newAv;
+      state.avatarId = newAv;
+      state.studentData.avatarId = newAv;
       await studentsRef.doc(pendingLoginId).update({ lastActive: firebase.firestore.FieldValue.serverTimestamp(), avatarId: newAv });
     } else {
       state.avatarId = data.avatarId;
@@ -2307,12 +2891,12 @@ async function handlePinSubmit() {
     }
     state.studentId = pendingLoginId;
     state.studentName = pendingLoginName;
-    localStorage.setItem('5b-vocab-student', JSON.stringify({ id: pendingLoginId, name: pendingLoginName, pin: pin }));
+    localStorage.setItem(LS_KEY, JSON.stringify({ id: pendingLoginId, name: pendingLoginName, pin: pin }));
     await loadProgress();
+    loadWeeklyGoal();
     preloadAvatars();
     updateAllAvatars();
     showHomeScreen();
-    setupPresence(); cleanupStaleBattleData(); checkPendingDuels();
   } catch (e) {
     console.error('PIN login error:', e);
     showPinError('pin-error', 'Connection error. Try again.');
@@ -2345,9 +2929,7 @@ async function handleSetPin() {
         avatarId: avatarId,
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
         lastActive: firebase.firestore.FieldValue.serverTimestamp(),
-        totalSessions: 0,
-        totalCorrect: 0,
-        totalAnswered: 0,
+        totalSessions: 0, totalCorrect: 0, totalAnswered: 0,
         xp: 0, streak: 0, lastSessionDate: '', badges: [], dailyChallengeLog: {}, exerciseTypesUsed: []
       };
       await studentsRef.doc(pendingLoginId).set(newStudent);
@@ -2356,13 +2938,13 @@ async function handleSetPin() {
     }
     state.studentId = pendingLoginId;
     state.studentName = pendingLoginName;
-    localStorage.setItem('5b-vocab-student', JSON.stringify({ id: pendingLoginId, name: pendingLoginName, pin: pin }));
+    localStorage.setItem(LS_KEY, JSON.stringify({ id: pendingLoginId, name: pendingLoginName, pin: pin }));
     if (!state.avatarId) state.avatarId = state.studentData?.avatarId || 1;
     await loadProgress();
+    loadWeeklyGoal();
     preloadAvatars();
     updateAllAvatars();
     showHomeScreen();
-    setupPresence(); cleanupStaleBattleData(); checkPendingDuels();
   } catch (e) {
     console.error('Registration error:', e);
     showPinError('set-pin-error', 'Connection error. Try again.');
@@ -2443,19 +3025,22 @@ async function saveSessionResults() {
     state.studentData.lastSessionDate = streakUpdate.lastSessionDate;
     state.studentData.exerciseTypesUsed = allUsed;
     state.studentData.totalSessions = (state.studentData.totalSessions || 0) + 1;
-    addToWeeklyGoal(earnedXP);
+    contributeToWeeklyGoal(earnedXP);
 
-    // Update per-source word progress
+    // Update per-source word progress (with spaced repetition fields)
     const progressBySource = {};
     for (const r of state.results) {
       const src = r.word.source;
       if (!progressBySource[src]) progressBySource[src] = {};
       const key = r.word.w;
-      if (!progressBySource[src][key]) progressBySource[src][key] = { c: 0, w: 0 };
+      if (!progressBySource[src][key]) progressBySource[src][key] = { c: 0, w: 0, correct: r.correct };
       if (r.correct) progressBySource[src][key].c++;
       else progressBySource[src][key].w++;
+      // Track last answer correctness for spaced repetition calc
+      progressBySource[src][key].lastCorrect = r.correct;
     }
 
+    const nowISO = new Date().toISOString();
     for (const [src, words] of Object.entries(progressBySource)) {
       const slug = slugify(src);
       const docRef = studentsRef.doc(state.studentId).collection('progress').doc(slug);
@@ -2467,14 +3052,39 @@ async function saveSessionResults() {
           if (merged[w]) {
             merged[w] = { c: (merged[w].c || 0) + counts.c, w: (merged[w].w || 0) + counts.w };
           } else {
-            merged[w] = counts;
+            merged[w] = { c: counts.c, w: counts.w };
+          }
+          // Spaced repetition: update lastSeen, interval, dueDate
+          merged[w].lastSeen = nowISO;
+          const oldInterval = merged[w].interval || 0;
+          if (counts.lastCorrect) {
+            // Last answer for this word in this session was correct
+            const newInterval = oldInterval === 0 ? 1 : Math.min(Math.round(oldInterval * 2.5), 60);
+            merged[w].interval = newInterval;
+            const due = new Date();
+            due.setDate(due.getDate() + newInterval);
+            merged[w].dueDate = due.toISOString();
+          } else {
+            // Last answer was wrong — reset interval
+            merged[w].interval = 1;
+            const due = new Date();
+            due.setDate(due.getDate() + 1);
+            merged[w].dueDate = due.toISOString();
           }
         }
         await docRef.set({ source: src, words: merged });
         state.progressData[slug] = { source: src, words: merged };
       } else {
-        await docRef.set({ source: src, words: words });
-        state.progressData[slug] = { source: src, words: words };
+        // New progress doc — add spaced repetition fields
+        const withSR = {};
+        for (const [w, counts] of Object.entries(words)) {
+          const newInterval = counts.lastCorrect ? 1 : 1;
+          const due = new Date();
+          due.setDate(due.getDate() + newInterval);
+          withSR[w] = { c: counts.c, w: counts.w, lastSeen: nowISO, interval: newInterval, dueDate: due.toISOString() };
+        }
+        await docRef.set({ source: src, words: withSR });
+        state.progressData[slug] = { source: src, words: withSR };
       }
     }
 
@@ -2490,15 +3100,25 @@ async function saveSessionResults() {
 }
 
 function logout() {
-  cleanupPresence();
-  localStorage.removeItem('5b-vocab-student');
+  const logoutSlug = state.studentName.toLowerCase().replace(/\s+/g, '-');
+  presenceRef.child(logoutSlug).update({ online: false });
+  if (state._inviteListener) invitesRef.off('child_added', state._inviteListener);
+  if (state._inviteChangeListener) invitesRef.off('child_changed', state._inviteChangeListener);
+  localStorage.removeItem(LS_KEY);
+  localStorage.removeItem(LS_KEY + '-section');
   state.studentId = null;
   state.studentName = null;
   state.studentData = null;
   state.progressData = {};
   document.getElementById('login-name').value = '';
   showNameStep();
-  showScreen('login-screen');
+  if (SECTIONS.length === 1) {
+    setClassId(SECTIONS[0].id);
+    localStorage.setItem(LS_KEY + '-section', SECTIONS[0].id);
+    showScreen('login-screen');
+  } else {
+    showScreen('section-screen');
+  }
 }
 
 // ===== PROGRESS HELPERS =====
@@ -2510,7 +3130,7 @@ function getSourceProgress(sourceKey) {
   let practiced = 0, mastered = 0;
   for (const w of Object.values(prog.words)) {
     practiced++;
-    if (w.c >= 3 && w.c > w.w) mastered++;
+    if (w.c >= 3 && w.c > w.w && (w.interval || 0) >= 14) mastered++;
   }
   return { practiced, mastered, total };
 }
@@ -2561,11 +3181,12 @@ function showProgressScreen() {
       if (w) {
         c = w.c || 0; wr = w.w || 0;
         practiced++;
-        if (c >= 3 && c > wr) { mastered++; status = 'mastered'; }
+        if (c >= 3 && c > wr && (w.interval || 0) >= 14) { mastered++; status = 'mastered'; }
         else if (wr > 0 && wr >= c) { weak++; status = 'weak'; }
         else { status = 'practiced'; }
       }
-      wordDetails.push({ word: entry.w, status, c, w: wr });
+      const isDue = w && w.dueDate && new Date(w.dueDate) <= new Date() && status !== 'unseen';
+      wordDetails.push({ word: entry.w, status, c, w: wr, isDue });
     }
 
     // Sort: weak first, then practiced, then mastered, then unseen
@@ -2622,9 +3243,10 @@ function showProgressScreen() {
 
     let wordRows = '';
     for (const wd of src.wordDetails) {
+      const dueBadge = wd.isDue ? '<span style="font-size:0.65rem;padding:1px 6px;border-radius:6px;background:rgba(245,158,11,0.15);color:#f59e0b;font-weight:600;margin-left:4px;">📅 Due</span>' : '';
       wordRows += `<div class="word-detail-row ${wd.status}">
         <div class="word-detail-status">${statusIcons[wd.status]}</div>
-        <div class="word-detail-name">${wd.word}</div>
+        <div class="word-detail-name">${wd.word}${dueBadge}</div>
         <div class="word-detail-counts">
           ${wd.status !== 'unseen' ? `<span class="correct-count">✓${wd.c}</span><span class="wrong-count">✗${wd.w}</span>` : '<span style="color:var(--muted)">—</span>'}
         </div>
@@ -2653,7 +3275,57 @@ function showProgressScreen() {
   }
 
   renderLevelRoadmap();
+  loadBattleStats();
   showScreen('progress-screen');
+}
+
+async function loadBattleStats() {
+  const card = document.getElementById('battle-stats-card');
+  if (!card || !state.studentId) return;
+  const d = state.studentData || {};
+  const played = d.battlesPlayed || 0;
+  if (played === 0) { card.style.display = 'none'; return; }
+  card.style.display = '';
+  document.getElementById('bs-played').textContent = played;
+  document.getElementById('bs-won').textContent = d.battlesWon || 0;
+  document.getElementById('bs-winrate').textContent = Math.round(((d.battlesWon || 0) / played) * 100) + '%';
+  document.getElementById('bs-xp').textContent = d.battleXpEarned || 0;
+  try {
+    const snap = await studentsRef.doc(state.studentId).collection('battleHistory').orderBy('date', 'desc').limit(20).get();
+    state.battleHistory = [];
+    snap.forEach(doc => state.battleHistory.push(doc.data()));
+    renderBattleHistory();
+  } catch (e) { console.error('Battle history load error:', e); }
+}
+
+function renderBattleHistory() {
+  const list = document.getElementById('battle-history-list');
+  if (!list) return;
+  if (!state.battleHistory || state.battleHistory.length === 0) {
+    list.innerHTML = '<div style="text-align:center;opacity:0.4;padding:12px;font-size:13px;">No battles yet</div>';
+    return;
+  }
+  const modeLabels = {translation:'Translation',definition:'Definition',context:'Context'};
+  const resultEmoji = {win:'\uD83C\uDFC6',loss:'\uD83D\uDCAA',draw:'\uD83E\uDD1D'};
+  const resultColor = {win:'var(--correct)',loss:'var(--wrong)',draw:'var(--muted)'};
+  list.innerHTML = state.battleHistory.map(b => {
+    const d = new Date(b.date);
+    const dateStr = d.toLocaleDateString('en-GB', {month:'short',day:'numeric'});
+    return '<div style="display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:13px;">' +
+      '<span style="font-size:18px;">' + (resultEmoji[b.result] || '') + '</span>' +
+      '<div style="flex:1;"><div style="font-weight:600;">' + escapeHtml(b.opponent) + '</div><div style="font-size:11px;opacity:0.4;">' + (modeLabels[b.mode] || b.mode) + ' · ' + dateStr + '</div></div>' +
+      '<div style="text-align:right;"><div style="font-weight:700;color:' + (resultColor[b.result] || '') + '">' + b.myScore + '–' + b.theirScore + '</div><div style="font-size:11px;opacity:0.5;">+' + b.xpEarned + ' XP</div></div>' +
+    '</div>';
+  }).join('');
+}
+
+function toggleBattleHistory() {
+  const list = document.getElementById('battle-history-list');
+  const toggle = document.getElementById('battle-history-toggle');
+  if (!list) return;
+  const hidden = list.style.display === 'none';
+  list.style.display = hidden ? '' : 'none';
+  toggle.innerHTML = (hidden ? '▲' : '▼') + ' Recent battles';
 }
 
 // ===== WORD REFERENCE =====
@@ -2701,14 +3373,20 @@ function buildReferenceList(sourceFilter, searchTerm) {
     group.className = 'ref-source-group';
     group.innerHTML = `<div class="ref-source-title">${src} · ${filtered.length} words</div>`;
 
+    const refSlug = slugify(src);
+    const refProg = state.progressData[refSlug];
+    const refWords = refProg && refProg.words ? refProg.words : {};
     for (const entry of filtered) {
       const item = document.createElement('div');
       item.className = 'ref-word-item';
       // Clean sentence: replace _____ with the actual word in bold
       const sentenceDisplay = entry.s.replace('_____', `<strong style="color:var(--accent)">${entry.w}</strong>`);
+      const rp = refWords[entry.w];
+      const refDue = rp && rp.dueDate && new Date(rp.dueDate) <= new Date();
+      const refDueBadge = refDue ? ' <span style="font-size:0.65rem;padding:1px 6px;border-radius:6px;background:rgba(245,158,11,0.15);color:#f59e0b;font-weight:600;">📅 Due</span>' : '';
       item.innerHTML = `
         <div class="ref-word-header">
-          <span class="ref-word-en">${entry.w}</span>
+          <span class="ref-word-en">${entry.w}${refDueBadge}</span>
           <span class="ref-word-de">${entry.g}</span>
         </div>
         <div class="ref-word-details">
@@ -2731,9 +3409,7 @@ function buildReferenceList(sourceFilter, searchTerm) {
 
 // ===== UI INIT =====
 function initSourceGrid() {
-  const listGrid = document.getElementById('source-grid-lists');
   const unitGrid = document.getElementById('source-grid-units');
-  listGrid.innerHTML = '';
   unitGrid.innerHTML = '';
   for (const key of Object.keys(vocabData)) {
     const btn = document.createElement('button');
@@ -2743,20 +3419,91 @@ function initSourceGrid() {
     const pct = prog.total > 0 ? Math.round((prog.mastered / prog.total) * 100) : 0;
     btn.innerHTML = `${key}<span class="count">${vocabData[key].length} words</span><div class="progress-indicator" style="width:${pct}%"></div>`;
     btn.onclick = () => toggleSource(btn);
-    if (key.startsWith('Unit')) {
-      unitGrid.appendChild(btn);
-    } else {
-      listGrid.appendChild(btn);
-    }
+    unitGrid.appendChild(btn);
   }
   updateWordCount();
 }
 
+// ===== WORD OF THE DAY =====
+function getWordOfTheDay() {
+  const allWords = [];
+  for (const [src, entries] of Object.entries(vocabData)) {
+    for (const e of entries) allWords.push({ ...e, source: src });
+  }
+  if (allWords.length === 0) return null;
+  // Deterministic daily seed
+  const today = new Date();
+  const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+  const idx = seed % allWords.length;
+  return allWords[idx];
+}
+
+function renderWordOfTheDay() {
+  const wotd = getWordOfTheDay();
+  const card = document.getElementById('today-card');
+  if (!wotd || !card) return;
+  card.style.display = '';
+  document.getElementById('wotd-word').textContent = wotd.w;
+  document.getElementById('wotd-german').textContent = wotd.g;
+  document.getElementById('wotd-def').textContent = wotd.d;
+  document.getElementById('wotd-source').textContent = wotd.source;
+}
+
+// ===== WEEKLY CLASS GOAL =====
+const WEEKLY_GOAL_TARGET = 5000;
+let weeklyGoalRef = null;
+let weeklyGoalData = { xp: 0 };
+
+function getCurrentWeekMonday() {
+  const d = new Date();
+  const day = d.getDay();
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+  const monday = new Date(d.setDate(diff));
+  return monday.toISOString().slice(0, 10);
+}
+
+async function loadWeeklyGoal() {
+  if (!classRef) return;
+  const weekKey = getCurrentWeekMonday();
+  weeklyGoalRef = classRef.collection('weeklyGoals').doc(weekKey);
+  try {
+    const doc = await weeklyGoalRef.get();
+    if (doc.exists) {
+      weeklyGoalData = doc.data();
+    } else {
+      weeklyGoalData = { xp: 0, target: WEEKLY_GOAL_TARGET, week: weekKey };
+      await weeklyGoalRef.set(weeklyGoalData);
+    }
+  } catch(e) { console.error('Weekly goal load error:', e); }
+  renderWeeklyGoal();
+}
+
+async function contributeToWeeklyGoal(sessionXp) {
+  if (!weeklyGoalRef || !sessionXp) return;
+  try {
+    await weeklyGoalRef.update({ xp: firebase.firestore.FieldValue.increment(sessionXp) });
+    weeklyGoalData.xp = (weeklyGoalData.xp || 0) + sessionXp;
+    renderWeeklyGoal();
+  } catch(e) { console.error('Weekly goal update error:', e); }
+}
+
+function renderWeeklyGoal() {
+  const card = document.getElementById('weekly-goal-card');
+  if (!card) return;
+  card.style.display = '';
+  const current = weeklyGoalData.xp || 0;
+  const pct = Math.min(100, Math.round((current / WEEKLY_GOAL_TARGET) * 100));
+  document.getElementById('weekly-goal-fill').style.width = pct + '%';
+  document.getElementById('weekly-goal-text').textContent = `${current.toLocaleString()} / ${WEEKLY_GOAL_TARGET.toLocaleString()} XP (${pct}%)`;
+  document.getElementById('weekly-goal-label').textContent = 'Week of ' + getCurrentWeekMonday();
+}
+
 function showHomeScreen() {
   // Welcome
+  const sectionLabel = SECTIONS.find(s => s.id === CLASS_ID)?.label || CLASS_ID;
   document.getElementById('welcome-name').textContent = state.studentName;
   const classTag = document.getElementById('profile-class-tag');
-  if (classTag) classTag.textContent = '5B';
+  if (classTag) classTag.textContent = sectionLabel;
   const homeLv = getLevel(state.studentData?.xp || 0);
   document.getElementById('welcome-xp').innerHTML = `⭐ ${(state.studentData?.xp || 0).toLocaleString()} XP · <span style="opacity:0.7;">${homeLv.name}</span>`;
   updateAllAvatars();
@@ -2771,27 +3518,28 @@ function showHomeScreen() {
   document.getElementById('stat-streak').textContent = state.studentData?.streak || 0;
   updateRankDisplay();
   renderBadgeRow();
+  renderWordOfTheDay();
+  renderWeeklyGoal();
   renderDailyCard();
 
-  // Smart review
-  const reviewWords = getSmartReviewWords();
-  const reviewBtn = document.getElementById('review-btn');
-  if (reviewBtn) {
-    if (reviewWords.length > 0) {
-      reviewBtn.style.display = '';
-      reviewBtn.textContent = '🔄 Smart Review (' + reviewWords.length + ' words)';
+  // Smart review button (replaces old weak words)
+  const reviewWords2 = getSmartReviewWords();
+  const reviewBtn2 = document.getElementById('review-btn');
+  if (reviewBtn2) {
+    if (reviewWords2.length > 0) {
+      reviewBtn2.style.display = '';
+      reviewBtn2.textContent = `🔄 Smart Review (${reviewWords2.length} words)`;
     } else {
-      reviewBtn.style.display = 'none';
+      reviewBtn2.style.display = 'none';
     }
   }
 
-  renderWOTD();
-  loadWeeklyGoal();
-  initSourceGrid();
   showScreen('home-screen');
-  // Update SFX toggle button state
-  const sfxBtn = document.getElementById('sfx-toggle');
-  if (sfxBtn) sfxBtn.textContent = SFX.enabled ? '🔊' : '🔇';
+  setupPresence();
+  const battleBtn = document.getElementById('btn-battle');
+  if (battleBtn) battleBtn.style.display = '';
+  checkPendingDuels();
+  setTimeout(cleanupStaleBattleData, 5000);
 }
 
 function toggleSource(btn) {
@@ -2825,44 +3573,260 @@ function selectAll(mode) {
 
 function selectType(btn) {
   const type = btn.dataset.type;
-  const allBtns = document.querySelectorAll('.type-btn');
-  const mixBtn = document.querySelector('.type-btn[data-type="mix"]');
+  const container = btn.closest('.type-select-list') || btn.closest('.type-grid');
+  const allBtns = container.querySelectorAll('.type-card, .type-btn');
+  const mixBtn = container.querySelector('[data-type="mix"]');
   if (type === 'mix') {
+    // Mix: deselect all individuals, select mix
     allBtns.forEach(b => b.classList.remove('selected'));
     mixBtn.classList.add('selected');
     state.exerciseType = 'mix';
   } else {
+    // Toggle this type
     mixBtn.classList.remove('selected');
     btn.classList.toggle('selected');
-    const selected = [...document.querySelectorAll('.type-btn.selected')].map(b => b.dataset.type).filter(t => t !== 'mix');
+    // Collect selected types
+    const selected = [...container.querySelectorAll('.type-card.selected, .type-btn.selected')].map(b => b.dataset.type).filter(t => t !== 'mix');
     if (selected.length === 0) {
+      // Nothing selected — revert to mix
       mixBtn.classList.add('selected');
       state.exerciseType = 'mix';
     } else if (selected.length === 1) {
       state.exerciseType = selected[0];
     } else {
-      state.exerciseType = selected;
+      state.exerciseType = selected; // Array = custom mix
     }
   }
 }
 
 function updateWordCount() {
+  // Legacy function — word count now handled by updateSetupWordCount() in overlay
   let count = 0;
-  state.selectedSources.forEach(src => { count += vocabData[src].length; });
-  const el = document.getElementById('word-count');
-  const startBtn = document.getElementById('start-btn');
-  const sprintBtn = document.getElementById('sprint-btn');
-  const speedBtn = document.getElementById('speed-btn');
+  state.selectedSources.forEach(src => { if (vocabData[src]) count += vocabData[src].length; });
+  return count;
+}
+
+// ===== PRACTICE SETUP OVERLAY =====
+let selectedMode = 'full';
+
+function openPracticeSetup() {
+  // Remove existing overlay if any
+  const old = document.getElementById('practice-setup-overlay');
+  if (old) old.remove();
+
+  // Reset selections
+  state.selectedSources.clear();
+  state.exerciseType = 'mix';
+  selectedMode = 'full';
+
+  const overlay = document.createElement('div');
+  overlay.id = 'practice-setup-overlay';
+  overlay.className = 'practice-setup-overlay';
+
+  // Step 1: Unit Selection
+  const step1 = document.createElement('div');
+  step1.id = 'setup-step-1';
+  step1.className = 'setup-step';
+  step1.innerHTML = `
+    <div class="setup-header">
+      <button class="setup-close" onclick="closePracticeSetup()">✕</button>
+      <h2>Select Units</h2>
+      <div class="setup-step-indicator">Step 1 of 2</div>
+    </div>
+    <div class="setup-body">
+      <div class="source-grid" id="setup-source-grid"></div>
+      <div class="quick-btns">
+        <button class="quick-btn" onclick="setupSelectAll('all')">Select All</button>
+        <button class="quick-btn" onclick="setupSelectAll('none')">Clear</button>
+      </div>
+      <div class="word-count-display" id="setup-word-count">Select units to begin</div>
+    </div>
+    <div class="setup-footer">
+      <button class="btn btn-primary btn-block" id="setup-next-btn" disabled onclick="practiceSetupNext()">Next →</button>
+    </div>
+  `;
+
+  // Step 2: Mode & Type Selection
+  const step2 = document.createElement('div');
+  step2.id = 'setup-step-2';
+  step2.className = 'setup-step';
+  step2.style.display = 'none';
+  step2.innerHTML = `
+    <div class="setup-header">
+      <button class="setup-back" onclick="practiceSetupBack()">← Back</button>
+      <h2>Choose Mode</h2>
+      <div class="setup-step-indicator">Step 2 of 2</div>
+    </div>
+    <div class="setup-body">
+      <div class="mode-select" id="mode-select">
+        <button class="mode-card selected" data-mode="full" onclick="selectMode(this)">
+          <span class="mode-icon">📚</span>
+          <div class="mode-info"><div class="mode-name">Full Run</div><div class="mode-desc">All selected words, mixed types</div></div>
+        </button>
+        <button class="mode-card" data-mode="sprint" onclick="selectMode(this)">
+          <span class="mode-icon">🏃</span>
+          <div class="mode-info"><div class="mode-name">Sprint</div><div class="mode-desc">10 random words, quick round</div></div>
+        </button>
+        <button class="mode-card" data-mode="speed" onclick="selectMode(this)">
+          <span class="mode-icon">⚡</span>
+          <div class="mode-info"><div class="mode-name">Speed Round</div><div class="mode-desc">60 seconds, answer fast!</div></div>
+        </button>
+        <button class="mode-card" data-mode="mc" onclick="selectMode(this)">
+          <span class="mode-icon">🎯</span>
+          <div class="mode-info"><div class="mode-name">Multiple Choice</div><div class="mode-desc">Choose from 4 options</div></div>
+        </button>
+        <button class="mode-card" data-mode="flashcards" onclick="selectMode(this)">
+          <span class="mode-icon">📇</span>
+          <div class="mode-info"><div class="mode-name">Flashcards</div><div class="mode-desc">Study mode, no pressure</div></div>
+        </button>
+      </div>
+      <div id="type-select-wrap" class="type-select-wrap">
+        <div class="type-select-label">Exercise Type</div>
+        <div class="type-select-list" id="setup-type-grid">
+          <button class="type-card selected" data-type="mix" onclick="selectType(this)">
+            <span class="type-card-name">&#128256; Mix</span>
+            <span class="type-card-desc">Random mix of all types</span>
+          </button>
+          <button class="type-card" data-type="context" onclick="selectType(this)">
+            <span class="type-card-name">&#128221; Context (easy)</span>
+            <span class="type-card-desc">Fill the blank &mdash; first letter + letter count shown</span>
+          </button>
+          <button class="type-card" data-type="context-hard" onclick="selectType(this)">
+            <span class="type-card-name">&#128221; Context (hard)</span>
+            <span class="type-card-desc">Fill the blank &mdash; only first letter, no count</span>
+          </button>
+          <button class="type-card" data-type="definition" onclick="selectType(this)">
+            <span class="type-card-name">&#128214; Definition (easy)</span>
+            <span class="type-card-desc">Read a definition &mdash; word count + first letters shown</span>
+          </button>
+          <button class="type-card" data-type="definition-hard" onclick="selectType(this)">
+            <span class="type-card-name">&#128214; Definition (hard)</span>
+            <span class="type-card-desc">Read a definition &mdash; no hints</span>
+          </button>
+          <button class="type-card" data-type="translation" onclick="selectType(this)">
+            <span class="type-card-name">&#127757; Translation</span>
+            <span class="type-card-desc">See the German word, type the English</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="setup-footer">
+      <button class="btn btn-primary btn-block" onclick="practiceSetupGo()">Go! 🚀</button>
+    </div>
+  `;
+
+  overlay.appendChild(step1);
+  overlay.appendChild(step2);
+  document.body.appendChild(overlay);
+
+  // Populate source grid
+  initSetupSourceGrid();
+}
+
+function closePracticeSetup() {
+  const overlay = document.getElementById('practice-setup-overlay');
+  if (overlay) overlay.remove();
+}
+
+function initSetupSourceGrid() {
+  const grid = document.getElementById('setup-source-grid');
+  grid.innerHTML = '';
+  for (const key of Object.keys(vocabData)) {
+    const btn = document.createElement('button');
+    btn.className = 'source-btn';
+    btn.dataset.source = key;
+    const prog = getSourceProgress(key);
+    const pct = prog.total > 0 ? Math.round((prog.mastered / prog.total) * 100) : 0;
+    btn.innerHTML = `${key}<span class="count">${vocabData[key].length} words</span><div class="progress-indicator" style="width:${pct}%"></div>`;
+    btn.onclick = () => {
+      const src = btn.dataset.source;
+      if (state.selectedSources.has(src)) {
+        state.selectedSources.delete(src);
+        btn.classList.remove('selected');
+      } else {
+        state.selectedSources.add(src);
+        btn.classList.add('selected');
+      }
+      updateSetupWordCount();
+    };
+    grid.appendChild(btn);
+  }
+}
+
+function setupSelectAll(mode) {
+  const btns = document.querySelectorAll('#setup-source-grid .source-btn');
+  state.selectedSources.clear();
+  btns.forEach(b => b.classList.remove('selected'));
+  if (mode === 'all') {
+    btns.forEach(b => {
+      state.selectedSources.add(b.dataset.source);
+      b.classList.add('selected');
+    });
+  }
+  updateSetupWordCount();
+}
+
+function updateSetupWordCount() {
+  let count = 0;
+  state.selectedSources.forEach(src => { if (vocabData[src]) count += vocabData[src].length; });
+  const el = document.getElementById('setup-word-count');
+  const nextBtn = document.getElementById('setup-next-btn');
   if (count === 0) {
-    el.innerHTML = 'Select sources to begin';
-    startBtn.disabled = true;
-    sprintBtn.disabled = true;
-    speedBtn.disabled = true;
+    el.innerHTML = 'Select units to begin';
+    nextBtn.disabled = true;
   } else {
     el.innerHTML = `<strong>${count}</strong> words selected`;
-    startBtn.disabled = false;
-    sprintBtn.disabled = false;
-    speedBtn.disabled = false;
+    nextBtn.disabled = false;
+  }
+}
+
+function practiceSetupNext() {
+  document.getElementById('setup-step-1').style.display = 'none';
+  document.getElementById('setup-step-2').style.display = '';
+}
+
+function practiceSetupBack() {
+  document.getElementById('setup-step-2').style.display = 'none';
+  document.getElementById('setup-step-1').style.display = '';
+}
+
+function selectMode(btn) {
+  if (btn.classList.contains('disabled')) return;
+  document.querySelectorAll('.mode-card').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  selectedMode = btn.dataset.mode;
+  // Show/hide type selection based on mode
+  const typeWrap = document.getElementById('type-select-wrap');
+  if (selectedMode === 'mc' || selectedMode === 'flashcards') {
+    typeWrap.style.display = 'none';
+  } else {
+    typeWrap.style.display = '';
+  }
+}
+
+function practiceSetupGo() {
+  closePracticeSetup();
+
+  if (selectedMode === 'mc') {
+    state.exerciseType = 'multiple-choice';
+  }
+  // exerciseType is already set by selectType() for other modes
+
+  switch (selectedMode) {
+    case 'sprint':
+      startSprint();
+      break;
+    case 'speed':
+      startSpeedRound();
+      break;
+    case 'flashcards':
+      startFlashcards();
+      break;
+    case 'mc':
+    case 'full':
+    default:
+      startPractice();
+      break;
   }
 }
 
@@ -2991,53 +3955,273 @@ function endSpeedRound() {
   endPractice();
 }
 
+// ===== FLASHCARD MODE =====
+let flashcardDeck = [];
+let flashcardGotCount = 0;
+let flashcardGotWords = new Set();
+let fcFlipped = false;
+let fcDirection = 'en-de'; // 'en-de' or 'de-en'
+
+function startFlashcards() {
+  // Show direction picker overlay
+  const old = document.getElementById('fc-direction-overlay');
+  if (old) old.remove();
+  const ov = document.createElement('div');
+  ov.id = 'fc-direction-overlay';
+  ov.className = 'practice-setup-overlay';
+  ov.innerHTML = '<div class="setup-step"><div class="setup-header"><button class="setup-close" onclick="document.getElementById(\'fc-direction-overlay\').remove()">✕</button><h2>Flashcard Direction</h2></div><div class="setup-body" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:2rem 1rem;">' +
+    '<button class="mode-card" onclick="launchFlashcards(\'en-de\')" style="max-width:400px;"><span class="mode-icon">🇬🇧→🇩🇪</span><div class="mode-info"><div class="mode-name">English → German</div><div class="mode-desc">See the English word, reveal the German translation</div></div></button>' +
+    '<button class="mode-card" onclick="launchFlashcards(\'de-en\')" style="max-width:400px;"><span class="mode-icon">🇩🇪→🇬🇧</span><div class="mode-info"><div class="mode-name">German → English</div><div class="mode-desc">See the German word, reveal the English translation</div></div></button>' +
+    '</div></div>';
+  document.body.appendChild(ov);
+}
+
+function launchFlashcards(direction) {
+  const ov = document.getElementById('fc-direction-overlay');
+  if (ov) ov.remove();
+  fcDirection = direction;
+  flashcardDeck = [];
+  flashcardGotCount = 0;
+  flashcardGotWords = new Set();
+  fcFlipped = false;
+  state.selectedSources.forEach(function(src) {
+    if (vocabData[src]) {
+      vocabData[src].forEach(function(word) { flashcardDeck.push({ ...word, source: src }); });
+    }
+  });
+  shuffle(flashcardDeck);
+  if (flashcardDeck.length === 0) return;
+  showScreen('flashcard-screen');
+  initFlashcardSwipe();
+  showFlashcard();
+}
+
+function showFlashcard() {
+  if (flashcardDeck.length === 0) {
+    endFlashcards();
+    return;
+  }
+  const word = flashcardDeck[0];
+  const card = document.getElementById('flashcard');
+  fcFlipped = false;
+  // Disable transition so reset doesn't animate (prevents revealing next card's back)
+  card.style.transition = 'none';
+  card.classList.remove('flipped', 'swiping', 'swipe-left', 'swipe-right');
+  card.style.transform = '';
+  card.style.opacity = '';
+  // Force reflow, then re-enable transition
+  card.offsetHeight;
+  card.style.transition = '';
+  // Fill front and back based on direction
+  if (fcDirection === 'de-en') {
+    // Front: German + definition, Back: English + full sentence
+    document.getElementById('fc-front-word').textContent = word.g;
+    document.getElementById('fc-front-detail').textContent = word.d;
+    document.getElementById('fc-back-word').textContent = word.w;
+    document.getElementById('fc-back-detail').textContent = word.s ? word.s.replace(/_+/g, word.cf || word.w) : '';
+  } else {
+    // Front: English + full sentence, Back: German + definition
+    document.getElementById('fc-front-word').textContent = word.w;
+    document.getElementById('fc-front-detail').textContent = word.s ? word.s.replace(/_+/g, word.cf || word.w) : '';
+    document.getElementById('fc-back-word').textContent = word.g;
+    document.getElementById('fc-back-detail').textContent = word.d;
+  }
+  document.getElementById('flashcard-counter').textContent = flashcardDeck.length + ' remaining';
+  var il = document.getElementById('swipe-indicator-left');
+  var ir = document.getElementById('swipe-indicator-right');
+  if (il) il.style.opacity = '0';
+  if (ir) ir.style.opacity = '0';
+}
+
+function flipCard() {
+  var card = document.getElementById('flashcard');
+  if (!card) return;
+  // Clear any inline transform so CSS class takes effect
+  card.style.transform = '';
+  card.style.transition = '';
+  card.style.opacity = '';
+  if (fcFlipped) {
+    fcFlipped = false;
+    card.classList.remove('flipped');
+  } else {
+    fcFlipped = true;
+    card.classList.add('flipped');
+  }
+}
+
+function flashcardGotIt() {
+  var word = flashcardDeck.shift();
+  if (word && !flashcardGotWords.has(word.w)) {
+    flashcardGotWords.add(word.w);
+    flashcardGotCount++;
+    saveFlashcardProgress(word);
+  }
+  showFlashcard();
+}
+
+function flashcardAgain() {
+  var word = flashcardDeck.shift();
+  if (word && flashcardDeck.length > 0) {
+    var pos = Math.floor(Math.random() * flashcardDeck.length) + 1;
+    flashcardDeck.splice(Math.min(pos, flashcardDeck.length), 0, word);
+  } else if (word) {
+    flashcardDeck.push(word);
+  }
+  showFlashcard();
+}
+
+function initFlashcardSwipe() {
+  var container = document.getElementById('flashcard-container');
+  if (!container) return;
+  if (container._fcBound) return; // Already initialized
+  container._fcBound = true;
+
+  var startX = 0, deltaX = 0, didSwipe = false;
+
+  function getCard() { return document.getElementById('flashcard'); }
+
+  container.addEventListener('touchstart', function(e) {
+    startX = e.touches[0].clientX;
+    deltaX = 0;
+    didSwipe = false;
+  }, { passive: true });
+
+  container.addEventListener('touchmove', function(e) {
+    deltaX = e.touches[0].clientX - startX;
+    if (Math.abs(deltaX) > 10) {
+      e.preventDefault();
+      didSwipe = true;
+    }
+    var card = getCard();
+    if (card && Math.abs(deltaX) > 10) {
+      card.style.transition = 'none';
+      // When flipped, rotateY(180deg) mirrors X axis, so negate visual movement
+      var visualDX = fcFlipped ? -deltaX : deltaX;
+      var rotate = visualDX * 0.06;
+      var base = fcFlipped ? 'rotateY(180deg) ' : '';
+      card.style.transform = base + 'translateX(' + visualDX + 'px) rotate(' + rotate + 'deg)';
+    }
+    var il = document.getElementById('swipe-indicator-left');
+    var ir = document.getElementById('swipe-indicator-right');
+    if (il) il.style.opacity = deltaX < -30 ? Math.min(1, (-deltaX - 30) / 60) : 0;
+    if (ir) ir.style.opacity = deltaX > 30 ? Math.min(1, (deltaX - 30) / 60) : 0;
+  }, { passive: false });
+
+  container.addEventListener('touchend', function() {
+    var card = getCard();
+    var il = document.getElementById('swipe-indicator-left');
+    var ir = document.getElementById('swipe-indicator-right');
+    if (il) il.style.opacity = '0';
+    if (ir) ir.style.opacity = '0';
+
+    if (Math.abs(deltaX) > 80) {
+      // Swipe — dismiss card. Visual direction must match finger direction
+      didSwipe = true;
+      var visualDX = fcFlipped ? -deltaX : deltaX;
+      if (card) {
+        card.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+        card.style.transform = (fcFlipped ? 'rotateY(180deg) ' : '') + (visualDX > 0 ? 'translateX(120%) rotate(15deg)' : 'translateX(-120%) rotate(-15deg)');
+        card.style.opacity = '0';
+      }
+      // Logical: deltaX > 0 = finger moved right = Got it
+      setTimeout(deltaX > 0 ? flashcardGotIt : flashcardAgain, 300);
+    } else if (didSwipe) {
+      // Small swipe — snap back
+      if (card) {
+        card.style.transition = 'transform 0.3s ease';
+        card.style.transform = fcFlipped ? 'rotateY(180deg)' : '';
+        setTimeout(function() { if (card) card.removeAttribute('style'); }, 300);
+      }
+    }
+    // If !didSwipe, the click event will fire and handle the tap
+  }, { passive: true });
+
+  // Click handles ALL taps (both mobile and desktop)
+  // On mobile: touchstart→touchend→click fires naturally for taps
+  // didSwipe flag prevents flip after a swipe gesture
+  container.addEventListener('click', function() {
+    if (didSwipe) { didSwipe = false; return; }
+    var card = getCard();
+    if (card) card.removeAttribute('style');
+    flipCard();
+  });
+}
+
+async function saveFlashcardProgress(word) {
+  if (!studentsRef || !state.studentId) return;
+  const slug = slugify(word.source);
+  try {
+    const docRef = studentsRef.doc(state.studentId).collection('progress').doc(slug);
+    const key = 'words.' + word.w.replace(/\./g, '\u00b7') + '.lastSeen';
+    await docRef.set({ [key]: new Date().toISOString() }, { merge: true });
+  } catch(e) { console.error('Flashcard progress save error:', e); }
+}
+
+async function endFlashcards() {
+  showScreen('results-screen');
+  const total = flashcardGotWords.size;
+  const remaining = flashcardDeck.length;
+  const xpEarned = total;
+
+  document.getElementById('final-score').textContent = total + ' studied';
+  document.getElementById('final-label').textContent = remaining > 0
+    ? total + ' cards completed \u00b7 ' + remaining + ' skipped'
+    : 'All ' + total + ' cards completed!';
+
+  if (studentsRef && state.studentId && total > 0) {
+    try {
+      const newXp = (state.studentData?.xp || 0) + xpEarned;
+      const newFlashcards = (state.studentData?.totalFlashcards || 0) + total;
+      await studentsRef.doc(state.studentId).update({
+        xp: newXp,
+        totalFlashcards: newFlashcards,
+        lastActive: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      state.studentData.xp = newXp;
+      state.studentData.totalFlashcards = newFlashcards;
+      state.xp = newXp;
+      document.getElementById('save-status').textContent = '+' + xpEarned + ' XP earned \u00b7 ' + newFlashcards + ' total flashcards studied';
+    } catch(e) { console.error('Flashcard save error:', e); }
+  }
+
+  document.getElementById('results-list').innerHTML = '<div style="text-align:center;padding:1rem;color:var(--muted);font-size:0.85rem;">Flashcard sessions focus on studying &mdash; no right or wrong answers.</div>';
+
+  const retryBtn = document.querySelector('.results-actions .btn-primary');
+  if (retryBtn) retryBtn.style.display = remaining > 0 ? '' : 'none';
+  if (retryBtn && remaining > 0) {
+    retryBtn.textContent = '\uD83D\uDCC7 Continue studying remaining cards';
+    retryBtn.onclick = () => { showScreen('flashcard-screen'); showFlashcard(); };
+  }
+}
+
 // ===== MULTIPLE CHOICE =====
 function getDistractors(word, count, type) {
-  const correct = getMCAnswer(word, type).toLowerCase();
-  const correctWords = new Set(correct.split(/\s+/));
-  const isVerb = /^to\s/.test(word.w);
-  const pool = [];
-
-  // Collect all vocab entries as candidates
-  for (const [src, entries] of Object.entries(vocabData)) {
-    for (const e of entries) {
-      const ans = getMCAnswer(e, type).toLowerCase();
+  // Use curated MC distractors if available
+  if (word.mc && word.mc.length >= count) {
+    return word.mc.slice(0, count).map(function(d) {
+      return { w: d, g: d, d: d, s: '', cf: d };
+    });
+  }
+  // Fallback: algorithmic distractor selection
+  var correct = getMCAnswer(word, type).toLowerCase();
+  var isVerb = /^to\s/.test(word.w);
+  var pool = [];
+  for (var src in vocabData) {
+    for (var i = 0; i < vocabData[src].length; i++) {
+      var e = vocabData[src][i];
+      var ans = getMCAnswer(e, type).toLowerCase();
       if (ans === correct) continue;
-      // Score similarity: shared words = more similar = better distractor
-      const eWords = new Set(ans.split(/\s+/));
-      let shared = 0;
-      for (const w of eWords) { if (correctWords.has(w)) shared++; }
-      // Prefer same word type (verb distractors for verbs, nouns for nouns)
-      const sameType = (isVerb && /^to\s/.test(e.w)) || (!isVerb && !/^to\s/.test(e.w));
-      // Prefer same source (unit) for topical relevance
-      const sameSource = src === word.source;
-      const lenDiff = Math.abs(ans.length - correct.length);
-      const similarLen = lenDiff <= 4 ? 2 : lenDiff <= 8 ? 1 : 0;
-      const score = (sameType ? 4 : 0) + similarLen + (!sameSource ? 1 : 0) + (shared > 0 ? -8 : 0) + Math.random() * 1.5;
-      pool.push({ entry: e, score, ans });
+      var sameType = (isVerb && /^to\s/.test(e.w)) || (!isVerb && !/^to\s/.test(e.w));
+      var lenDiff = Math.abs(ans.length - correct.length);
+      var score = (sameType ? 4 : 0) + (lenDiff <= 4 ? 2 : 0) + Math.random() * 1.5;
+      pool.push({ entry: e, score: score, ans: ans });
     }
   }
-  // Sort by score descending (best distractors first), exclude those sharing key words with answer
-  pool.sort((a, b) => b.score - a.score);
-  // Deduplicate by answer text
-  const seen = new Set([correct]);
-  const result = [];
-  for (const p of pool) {
-    if (seen.has(p.ans)) continue;
-    seen.add(p.ans);
-    result.push(p.entry);
-    if (result.length >= count) break;
-  }
-  // If not enough, fill with random
-  if (result.length < count) {
-    for (const [src, entries] of Object.entries(vocabData)) {
-      for (const e of entries) {
-        const ans = getMCAnswer(e, type).toLowerCase();
-        if (!seen.has(ans)) { seen.add(ans); result.push(e); }
-        if (result.length >= count) break;
-      }
-      if (result.length >= count) break;
-    }
+  pool.sort(function(a, b) { return b.score - a.score; });
+  var seen = new Set([correct]);
+  var result = [];
+  for (var j = 0; j < pool.length && result.length < count; j++) {
+    if (!seen.has(pool[j].ans)) { seen.add(pool[j].ans); result.push(pool[j].entry); }
   }
   return result;
 }
@@ -3049,6 +4233,7 @@ function getMCAnswer(word, type) {
     return word.w.replace(/^to\s+/, '').replace(/\(.*?\)/g, '').replace(/\bsth\.?\s*/g, '').replace(/\bsb\.?\s*/g, '').replace(/[.!?]+$/g, '').trim().replace(/\s+/g, ' ');
   }
   if (type === 'mc-context' || type === 'context' || type === 'context-hard') {
+    // For MC, show full phrase so buttons aren't just single words like "go"
     const cf = word.cf || word.w;
     return cf.replace(/^to\s+/i, '').replace(/\(.*?\)/g, '').replace(/\bsth\.?\s*/g, '').replace(/\bsb\.?\s*/g, '').replace(/[.!?]+$/g, '').trim();
   }
@@ -3101,6 +4286,7 @@ function handleMCClick(btn, correct, word, type, grid) {
 
   if (correct) {
     SFX.play('correct');
+    if (state.comboStreak >= 2) SFX.play('combo');
     btn.classList.add('correct');
     state.score++;
     state.comboStreak++;
@@ -3109,12 +4295,16 @@ function handleMCClick(btn, correct, word, type, grid) {
     updateComboBadge();
     state.results.push({ word, correct: true, userAnswer: btn.textContent, type: state.currentType, comboMult: state.comboMult });
     if (state.isSpeedRound) showXPFloat();
+    const qcard = document.getElementById('quiz-card');
+    if (qcard) { qcard.classList.remove('flash-correct','flash-wrong'); qcard.offsetHeight; qcard.classList.add('flash-correct'); }
     setTimeout(() => { nextWord(); }, state.isSpeedRound ? 400 : 800);
   } else {
     SFX.play('wrong');
     if (state.comboStreak >= 3) showComboLost();
     state.comboStreak = 0; state.comboMult = 1; updateComboBadge();
     btn.classList.add('wrong');
+    const qcard2 = document.getElementById('quiz-card');
+    if (qcard2) { qcard2.classList.remove('flash-correct','flash-wrong'); qcard2.offsetHeight; qcard2.classList.add('flash-wrong'); }
     allBtns.forEach(b => { if (!b.classList.contains('wrong')) b.classList.add('reveal'); });
     const correctAnswer = getMCAnswer(word, type).toLowerCase().trim();
     allBtns.forEach(b => { if (b.textContent.toLowerCase().trim() === correctAnswer) b.classList.add('correct'); });
@@ -3139,8 +4329,10 @@ function getTaskType() {
     const easyTypes = ['context', 'definition', 'translation'];
     return easyTypes[Math.floor(Math.random() * easyTypes.length)];
   }
+  // Handle array (custom multi-select) or single type
   const sel = state.exerciseType;
   const pool = Array.isArray(sel) ? sel : sel === 'mix' ? ['context', 'context-hard', 'definition', 'definition-hard', 'translation'] : [sel];
+  // Expand MC entries to mc- prefixed types
   const expanded = [];
   for (const t of pool) {
     if (t === 'multiple-choice') expanded.push('mc-context', 'mc-definition', 'mc-translation');
@@ -3179,15 +4371,30 @@ function getFirstLetterHint(word, showLetterCount) {
   }
 }
 
+let _skipAnim = false;
 function showWord() {
-  if (state._skipAnim) { state._skipAnim = false; }
   if (state.isSpeedRound && state.speedTimeLeft <= 0) return;
   if (state.currentIdx >= state.words.length) {
     if (state.isSpeedRound) { endSpeedRound(); return; }
     endPractice(); return;
   }
-  const qc = document.getElementById('quiz-card');
-  if (qc && state.currentIdx > 0) { qc.classList.remove('card-slide-in'); void qc.offsetWidth; qc.classList.add('card-slide-in'); }
+  // Card slide animation
+  if (!_skipAnim && state.currentIdx > 0) {
+    const card = document.getElementById('quiz-card');
+    if (card) {
+      card.classList.add('card-slide-out');
+      setTimeout(() => {
+        card.classList.remove('card-slide-out');
+        card.classList.add('card-slide-in');
+        _skipAnim = true;
+        showWord();
+        _skipAnim = false;
+        card.offsetHeight;
+        card.classList.remove('card-slide-in');
+      }, 200);
+      return;
+    }
+  }
   const word = state.words[state.currentIdx];
   const type = getTaskType();
   state.currentType = type;
@@ -3292,6 +4499,7 @@ function checkAnswer() {
   const feedback = document.getElementById('feedback');
   if (correct) {
     SFX.play('correct');
+    if (state.comboStreak >= 2) SFX.play('combo');
     state.score++;
     state.comboStreak++;
     if (state.comboStreak > state.comboMax) state.comboMax = state.comboStreak;
@@ -3300,7 +4508,8 @@ function checkAnswer() {
     input.className = 'answer-input correct';
     feedback.className = 'feedback correct';
     feedback.innerHTML = 'Correct!';
-    const _qc = document.getElementById('quiz-card'); if (_qc) { _qc.classList.remove('flash-correct'); void _qc.offsetWidth; _qc.classList.add('flash-correct'); }
+    const qcard = document.getElementById('quiz-card');
+    if (qcard) { qcard.classList.remove('flash-correct','flash-wrong'); qcard.offsetHeight; qcard.classList.add('flash-correct'); }
     if (state.isSpeedRound) {
       state.results.push({ word, correct: true, userAnswer, type: state.currentType, comboMult: state.comboMult });
       showXPFloat(); setTimeout(nextWord, 400); return;
@@ -3311,7 +4520,8 @@ function checkAnswer() {
     state.comboStreak = 0; state.comboMult = 1; updateComboBadge();
     input.className = 'answer-input wrong';
     feedback.className = 'feedback wrong';
-    const _qcw = document.getElementById('quiz-card'); if (_qcw) { _qcw.classList.remove('flash-wrong'); void _qcw.offsetWidth; _qcw.classList.add('flash-wrong'); }
+    const qcard = document.getElementById('quiz-card');
+    if (qcard) { qcard.classList.remove('flash-correct','flash-wrong'); qcard.offsetHeight; qcard.classList.add('flash-wrong'); }
     const isCtx = state.currentType === 'context' || state.currentType === 'context-hard';
     const isDef = state.currentType === 'definition' || state.currentType === 'definition-hard';
     let displayAnswer;
@@ -3354,22 +4564,113 @@ function spellVariants(s) {
   return [...v];
 }
 
+function expandAbbreviations(s) {
+  const result = new Set([s]);
+  // Handle combined "sb./sth." — expand to all useful forms including standalone
+  if (/\bsb\.?\s*\/\s*sth\.?/i.test(s)) {
+    const comboPat = /\bsb\.?\s*\/\s*sth\.?\b/gi;
+    for (const r of ['somebody/something','somebody or something','someone/something','someone or something','somebody','someone','something']) {
+      result.add(s.replace(comboPat, r));
+    }
+  }
+  // Individual abbreviations — iterate until stable
+  const singles = [
+    [/\bsb\.?(?=\s|$|[/,])/gi, ['somebody', 'someone']],
+    [/\bsth\.?(?=\s|$|[/,])/gi, ['something']],
+  ];
+  let prevSize = 0;
+  while (result.size !== prevSize) {
+    prevSize = result.size;
+    for (const base of [...result]) {
+      for (const [pat, replacements] of singles) {
+        if (pat.test(base)) {
+          for (const r of replacements) { pat.lastIndex = 0; result.add(base.replace(pat, r)); }
+        }
+        pat.lastIndex = 0;
+      }
+    }
+  }
+  return [...result];
+}
+
+function expandAmpersand(s) {
+  const result = [s];
+  if (s.includes('&')) result.push(s.replace(/\s*&\s*/g, ' and ').replace(/\s+/g, ' '));
+  if (/\band\b/.test(s)) result.push(s.replace(/\band\b/g, '&'));
+  return result;
+}
+
+function expandNumbers(s) {
+  const W = ['zero','one','two','three','four','five','six','seven','eight','nine',
+    'ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+  const T = ['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+  const OW = ['zeroth','first','second','third','fourth','fifth','sixth','seventh','eighth','ninth',
+    'tenth','eleventh','twelfth','thirteenth','fourteenth','fifteenth','sixteenth','seventeenth','eighteenth','nineteenth'];
+  const OT = ['','','twentieth','thirtieth','fortieth','fiftieth','sixtieth','seventieth','eightieth','ninetieth'];
+  function n2w(n) { if (n < 20) return W[n]; if (n < 100) return T[n/10|0] + (n%10 ? '-' + W[n%10] : ''); return null; }
+  function n2o(n) { if (n < 20) return OW[n]; if (n%10===0 && n<100) return OT[n/10|0]; if (n<100) return T[n/10|0]+'-'+OW[n%10]; return null; }
+  function oSfx(n) { const s=['th','st','nd','rd'], v=n%100; return n+(s[(v-20)%10]||s[v]||s[0]); }
+  const result = new Set([s]);
+  // digits -> words
+  result.add(s.replace(/\b(\d{1,2})\b/g, (m,d) => { const w = n2w(+d); return w || m; }));
+  // ordinal digits -> words: "1st" -> "first"
+  result.add(s.replace(/\b(\d{1,2})(st|nd|rd|th)\b/gi, (m,d) => { const w = n2o(+d); return w || m; }));
+  // words -> digits
+  const w2n = {}; for (let i=0;i<100;i++){const w=n2w(i);if(w)w2n[w]=String(i);}
+  const o2n = {}; for (let i=0;i<100;i++){const w=n2o(i);if(w)o2n[w]=oSfx(i);}
+  const wKeys = Object.keys(w2n).sort((a,b)=>b.length-a.length);
+  let tmp = s;
+  for (const w of wKeys) { tmp = tmp.replace(new RegExp('\\b'+w.replace('-','[-\\s]')+'\\b','gi'), w2n[w]); }
+  result.add(tmp);
+  const oKeys = Object.keys(o2n).sort((a,b)=>b.length-a.length);
+  let tmp2 = s;
+  for (const w of oKeys) { tmp2 = tmp2.replace(new RegExp('\\b'+w.replace('-','[-\\s]')+'\\b','gi'), o2n[w]); }
+  result.add(tmp2);
+  return [...result];
+}
+
 function isCorrect(userAnswer, word) {
   const norm = normalizeAnswer(userAnswer);
   const expected = normalizeAnswer(word.w);
   const cf = normalizeAnswer(getContextForm(word));
-  const candidates = [expected, cf];
-  if (word.a) word.a.forEach(a => candidates.push(normalizeAnswer(a)));
+  const baseCandidates = [expected, cf];
+  if (word.a) word.a.forEach(a => baseCandidates.push(normalizeAnswer(a)));
+
+  // Expand abbreviations, ampersands, and numbers on all candidates
+  const candidates = new Set();
+  for (const c of baseCandidates) {
+    for (const ea of expandAbbreviations(c)) {
+      for (const em of expandAmpersand(ea)) {
+        for (const en of expandNumbers(em)) { candidates.add(en); }
+      }
+    }
+  }
+
+  // Also expand user input (numbers & ampersand, not abbreviations)
+  const userForms = new Set();
+  for (const en of expandNumbers(norm)) {
+    for (const em of expandAmpersand(en)) { userForms.add(em); }
+  }
+
+  // Accept partial answers: strip small words shown fully in easy-mode hints
   const _sw = new Set(['to','a','an','the','in','on','of','for','at','up','out','by','with','off','down']);
   const _co = s => s.split(' ').filter(w => !_sw.has(w)).join(' ');
-  for (const c of [...candidates]) { const p = _co(c); if (p && p !== c) candidates.push(p); }
-  const strip = s => s.replace(/[-_.,!?'"()]/g, '').replace(/\s+/g, ' ').trim();
-  const userV = spellVariants(norm);
-  const userS = spellVariants(strip(norm));
+  for (const c of [...candidates]) { const p = _co(c); if (p && p !== c) candidates.add(p); }
+
+  const strip = s => s.replace(/[.,]/g, ' ').replace(/[-_!?'"()&]/g, '').replace(/\s+/g, ' ').trim();
+
+  // Build all user variants
+  const allUserNorm = new Set();
+  const allUserStrip = new Set();
+  for (const u of userForms) {
+    for (const sv of spellVariants(u)) allUserNorm.add(sv);
+    for (const sv of spellVariants(strip(u))) allUserStrip.add(sv);
+  }
+
   for (const c of candidates) {
-    for (const u of userV) { if (u === c) return true; }
+    for (const u of allUserNorm) { if (u === c) return true; }
     const sc = strip(c);
-    for (const u of userS) { if (u === sc) return true; }
+    for (const u of allUserStrip) { if (u === sc) return true; }
   }
   return false;
 }
@@ -3419,9 +4720,10 @@ async function endPractice() {
   for (const r of sorted) {
     const item = document.createElement('div');
     item.className = 'result-item ' + (r.correct ? 'correct' : 'wrong');
+    const reasonTag = r.word.reason ? `<span style="font-size:0.65rem;padding:1px 6px;border-radius:6px;background:rgba(255,255,255,0.07);color:var(--text-secondary);font-weight:500;margin-left:4px;">${escapeHtml(r.word.reason)}</span>` : '';
     item.innerHTML = `
       <span class="result-icon">${r.correct ? '✓' : '✗'}</span>
-      <span class="result-word">${r.word.w}</span>
+      <span class="result-word">${r.word.w}${reasonTag}</span>
       <span class="result-answer">${r.correct ? '' : 'You: ' + r.userAnswer}</span>
     `;
     list.appendChild(item);
@@ -3437,7 +4739,7 @@ async function endPractice() {
     state.studentData.totalSprints = (state.studentData.totalSprints || 0) + 1;
   }
   await saveSessionResults();
-  // Level-up detection
+  // Level-up detection — show ALL intermediate levels if multiple unlocked
   const newLevel = getLevel(state.studentData?.xp || 0).level;
   if (newLevel > oldLevel) {
     const levelsToShow = [];
@@ -3499,83 +4801,60 @@ document.addEventListener('keydown', e => {
   }, { passive: false });
 })();
 
-// ===== WORD OF THE DAY =====
-function getWordOfTheDay() {
-  const allWords = [];
-  for (const [src, entries] of Object.entries(vocabData)) {
-    for (const e of entries) allWords.push({ ...e, source: src });
+// ===== SECTION SELECTION =====
+function initSectionScreen() {
+  const btns = document.getElementById('section-btns');
+  btns.innerHTML = SECTIONS.map(s =>
+    `<button class="section-btn" data-id="${s.id}" onclick="selectSection(this)">${s.label}</button>`
+  ).join('');
+}
+
+let pendingSection = null;
+function selectSection(btn) {
+  document.querySelectorAll('.section-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  pendingSection = SECTIONS.find(s => s.id === btn.dataset.id);
+  const pinArea = document.getElementById('section-pin-area');
+  const goBtn = document.getElementById('section-go-btn');
+  if (pendingSection.pin) {
+    pinArea.style.display = '';
+    goBtn.style.display = 'none';
+    document.getElementById('section-pin').value = '';
+    document.getElementById('section-pin').focus();
+  } else {
+    pinArea.style.display = 'none';
+    goBtn.style.display = '';
   }
-  if (allWords.length === 0) return null;
-  const today = new Date();
-  const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
-  return allWords[seed % allWords.length];
+  document.getElementById('section-error').textContent = '';
 }
 
-function renderWOTD() {
-  const w = getWordOfTheDay();
-  const card = document.getElementById('wotd-card');
-  if (!w || !card) return;
-  card.style.display = '';
-  document.getElementById('wotd-word').textContent = w.w;
-  document.getElementById('wotd-german').textContent = w.g;
-  document.getElementById('wotd-def').textContent = w.d || '';
-  document.getElementById('wotd-sentence').textContent = w.s ? w.s.replace('_____', w.cf || w.w.replace(/^to\s+/i, '')) : '';
+function handleSectionSubmit() {
+  if (!pendingSection) { document.getElementById('section-error').textContent = 'Select a class first.'; return; }
+  if (pendingSection.pin) {
+    const pin = document.getElementById('section-pin').value.trim();
+    if (pin !== pendingSection.pin) { document.getElementById('section-error').textContent = 'Wrong class PIN.'; return; }
+  }
+  setClassId(pendingSection.id);
+  localStorage.setItem(LS_KEY + '-section', pendingSection.id);
+  showScreen('login-screen');
 }
 
-// ===== WEEKLY CLASS GOAL =====
-const WEEKLY_GOAL_TARGET = 3000;
-let weeklyGoalRef = null;
-
-function getWeekId() {
-  const d = new Date();
-  const jan1 = new Date(d.getFullYear(), 0, 1);
-  const week = Math.ceil(((d - jan1) / 86400000 + jan1.getDay() + 1) / 7);
-  return `${d.getFullYear()}-W${String(week).padStart(2, '0')}`;
-}
-
-async function loadWeeklyGoal() {
-  try {
-    const weekId = getWeekId();
-    weeklyGoalRef = classRef.collection('weeklyGoals').doc(weekId);
-    const doc = await weeklyGoalRef.get();
-    const data = doc.exists ? doc.data() : { totalXP: 0 };
-    renderWeeklyGoal(data.totalXP || 0);
-  } catch (e) { console.error('Weekly goal error:', e); }
-}
-
-function renderWeeklyGoal(totalXP) {
-  const card = document.getElementById('weekly-goal');
-  if (!card) return;
-  card.style.display = '';
-  const pct = Math.min(100, (totalXP / WEEKLY_GOAL_TARGET) * 100);
-  document.getElementById('wg-fill').style.width = pct + '%';
-  document.getElementById('wg-current').textContent = totalXP.toLocaleString() + ' XP';
-  document.getElementById('wg-target').textContent = WEEKLY_GOAL_TARGET.toLocaleString() + ' XP goal';
-  if (totalXP >= WEEKLY_GOAL_TARGET) card.classList.add('wg-reached');
-  else card.classList.remove('wg-reached');
-}
-
-async function addToWeeklyGoal(xp) {
-  if (!weeklyGoalRef || !xp) return;
-  try {
-    await weeklyGoalRef.set({ totalXP: firebase.firestore.FieldValue.increment(xp), lastUpdated: firebase.firestore.FieldValue.serverTimestamp() }, { merge: true });
-    const doc = await weeklyGoalRef.get();
-    if (doc.exists) renderWeeklyGoal(doc.data().totalXP || 0);
-  } catch (e) { console.error('Weekly goal update error:', e); }
-}
-
-function toggleSfx() {
-  SFX.toggle();
-  const btn = document.getElementById('sfx-toggle');
-  if (btn) btn.textContent = SFX.enabled ? '🔊' : '🔇';
-}
+document.getElementById('section-pin')?.addEventListener('keydown', e => { if (e.key === 'Enter') handleSectionSubmit(); });
 
 // ===== BATTLE SYSTEM =====
 const rtdb = firebase.database();
-const battleRoot = rtdb.ref('battles/' + CLASS_ID);
-const presenceRef = battleRoot.child('presence');
-const invitesRef = battleRoot.child('invites');
-const roomsRef = battleRoot.child('rooms');
+let battleRoot = null;
+let presenceRef = null;
+let invitesRef = null;
+let roomsRef = null;
+
+function initBattleRefs() {
+  if (!CLASS_ID) return;
+  battleRoot = rtdb.ref('battles/' + CLASS_ID);
+  presenceRef = battleRoot.child('presence');
+  invitesRef = battleRoot.child('invites');
+  roomsRef = battleRoot.child('rooms');
+}
 
 function escapeHtml(str) {
   const div = document.createElement('div');
@@ -3601,16 +4880,6 @@ function setupPresence() {
     }
   });
   listenForInvites();
-}
-
-function cleanupPresence() {
-  if (!state.studentName) return;
-  const slug = state.studentName.toLowerCase().replace(/\s+/g, '-');
-  const myPresenceRef = presenceRef.child(slug);
-  myPresenceRef.update({ online: false, lastSeen: firebase.database.ServerValue.TIMESTAMP });
-  rtdb.ref('.info/connected').off();
-  if (state._inviteListener) { invitesRef.off('child_added', state._inviteListener); state._inviteListener = null; }
-  if (state._inviteChangeListener) { invitesRef.off('child_changed', state._inviteChangeListener); state._inviteChangeListener = null; }
 }
 
 function listenForInvites() {
@@ -3655,7 +4924,6 @@ function openBattleLobby() {
       const d = child.val();
       if (child.key !== mySlug && d.online === true) players.push({ slug: child.key, name: d.name, avatarId: d.avatarId || 1 });
     });
-    if (players.length === 0) { showBattleMessage('No opponents online', 'Nobody else is online right now. Try again later!'); return; }
     showBattleLobby(players);
   });
 }
@@ -3663,32 +4931,57 @@ function openBattleLobby() {
 function showBattleLobby(players) {
   const overlay = document.createElement('div');
   overlay.id = 'battle-lobby-overlay';
-  overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:10000;display:flex;align-items:center;justify-content:center;animation:fadeIn 0.2s ease;';
+  overlay.className = 'battle-overlay';
   overlay.onclick = function(e) { if (e.target === this) this.remove(); };
   let listHtml = '';
   players.forEach(p => {
-    listHtml += '<div data-slug="' + p.slug + '" data-name="' + escapeHtml(p.name) + '" onclick="sendBattleInvite(this.dataset.slug,this.dataset.name);document.getElementById(\'battle-lobby-overlay\').remove();" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:10px;cursor:pointer;transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.08)\'" onmouseout="this.style.background=\'transparent\'">' +
+    listHtml += '<div data-slug="' + p.slug + '" data-name="' + escapeHtml(p.name) + '" onclick="document.getElementById(\'battle-lobby-overlay\').remove();showBattleModeSelect(this.dataset.slug,this.dataset.name);" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:10px;cursor:pointer;transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.08)\'" onmouseout="this.style.background=\'transparent\'">' +
       '<img src="' + avatarSrc(p.avatarId) + '" class="avatar avatar-sm">' +
       '<div style="font-size:15px;font-weight:600;">' + escapeHtml(p.name) + '</div>' +
-      '<div style="margin-left:auto;font-size:12px;opacity:0.5;">Challenge →</div>' +
+      '<div style="margin-left:auto;font-size:12px;opacity:0.5;">Challenge \u2192</div>' +
     '</div>';
   });
   const modal = document.createElement('div');
   modal.className = 'battle-modal-bg battle-modal';
-  modal.innerHTML = '<div style="text-align:center;margin-bottom:16px;"><div style="font-size:18px;font-weight:600;">⚔️ Choose your opponent</div><div style="font-size:13px;opacity:0.5;margin-top:4px;">' + players.length + ' classmate' + (players.length > 1 ? 's' : '') + ' online</div></div><div>' + listHtml + '</div><div style="border-top:1px solid var(--card-border,rgba(255,255,255,0.1));margin-top:12px;padding-top:12px;"><button onclick="document.getElementById(\'battle-lobby-overlay\').remove();openDuelHub();" style="width:100%;padding:10px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;background:var(--accent-glow,rgba(59,130,246,0.15));border:1px solid var(--accent,#3b82f6);color:var(--accent,#3b82f6);">📋 Quiz Duels (async)</button></div><div style="text-align:center;margin-top:12px;"><button onclick="document.getElementById(\'battle-lobby-overlay\').remove()" class="battle-modal-close">Cancel</button></div>';
+  modal.innerHTML = '<div style="text-align:center;margin-bottom:16px;"><div style="font-size:18px;font-weight:600;">\u2694\uFE0F Choose your opponent</div><div style="font-size:13px;opacity:0.5;margin-top:4px;">' + players.length + ' classmate' + (players.length > 1 ? 's' : '') + ' online</div></div><div>' + listHtml + '</div><div style="border-top:1px solid var(--card-border,rgba(255,255,255,0.1));margin-top:12px;padding-top:12px;"><button onclick="document.getElementById(\'battle-lobby-overlay\').remove();openDuelHub();" style="width:100%;padding:10px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;background:var(--accent-glow,rgba(59,130,246,0.15));border:1px solid var(--accent,#3b82f6);color:var(--accent,#3b82f6);">📋 Quiz Duels (async)</button></div><div style="text-align:center;margin-top:12px;"><button onclick="document.getElementById(\'battle-lobby-overlay\').remove()" class="battle-modal-close">Cancel</button></div>';
   overlay.appendChild(modal);
   document.body.appendChild(overlay);
 }
 
-async function sendBattleInvite(opponentSlug, opponentName) {
+function showBattleModeSelect(slug, name) {
+  const overlay = document.createElement('div');
+  overlay.id = 'battle-mode-overlay';
+  overlay.className = 'battle-overlay';
+  overlay.onclick = function(e) { if (e.target === this) this.remove(); };
+  const modal = document.createElement('div');
+  modal.className = 'battle-modal-bg battle-modal';
+  modal.style.maxWidth = '340px';
+  const modes = [
+    { id: 'translation', icon: '🌍', name: 'Translation Duel', desc: 'German → English' },
+    { id: 'definition', icon: '📖', name: 'Definition Duel', desc: 'Read the definition, guess the word' },
+    { id: 'context', icon: '📝', name: 'Context Clash', desc: 'Fill the blank in the sentence' }
+  ];
+  let btnsHtml = modes.map(m =>
+    '<button onclick="document.getElementById(\'battle-mode-overlay\').remove();sendBattleInvite(\'' + slug + '\',\'' + escapeHtml(name).replace(/'/g, "\\'") + '\',\'' + m.id + '\')" style="width:100%;padding:14px 16px;margin-bottom:8px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);cursor:pointer;text-align:left;display:flex;align-items:center;gap:12px;color:inherit;transition:background 0.15s;" onmouseover="this.style.background=\'rgba(255,255,255,0.1)\'" onmouseout="this.style.background=\'rgba(255,255,255,0.05)\'">' +
+      '<span style="font-size:24px;">' + m.icon + '</span>' +
+      '<div><div style="font-weight:700;font-size:15px;">' + m.name + '</div><div style="font-size:12px;opacity:0.5;">' + m.desc + '</div></div>' +
+    '</button>'
+  ).join('');
+  modal.innerHTML = '<div style="font-size:18px;font-weight:700;margin-bottom:4px;">⚔️ Challenge ' + escapeHtml(name) + '</div><div style="font-size:13px;opacity:0.5;margin-bottom:16px;">Choose a battle mode</div>' + btnsHtml + '<button onclick="document.getElementById(\'battle-mode-overlay\').remove()" class="battle-modal-close">Cancel</button>';
+  overlay.appendChild(modal);
+  document.body.appendChild(overlay);
+}
+
+async function sendBattleInvite(opponentSlug, opponentName, mode) {
+  mode = mode || 'translation';
   const mySlug = state.studentName.toLowerCase().replace(/\s+/g, '-');
   const roomRef = roomsRef.push();
   const roomId = roomRef.key;
-  const battleWords = pickBattleWords(10);
+  const battleWords = pickBattleWords(5);
   await roomRef.set({
     players: { p1: mySlug, p2: opponentSlug },
     playerNames: { p1: state.studentName, p2: opponentName },
-    status: 'waiting', round: 0, words: battleWords,
+    status: 'waiting', round: 0, words: battleWords, mode: mode,
     answers: {}, scores: { p1: 0, p2: 0 }, winner: null,
     createdAt: firebase.database.ServerValue.TIMESTAMP
   });
@@ -3696,7 +4989,7 @@ async function sendBattleInvite(opponentSlug, opponentName) {
   await inviteRef.set({
     from: mySlug, fromName: state.studentName,
     to: opponentSlug, toName: opponentName,
-    status: 'pending', roomId: roomId, timestamp: Date.now()
+    status: 'pending', roomId: roomId, mode: mode, timestamp: Date.now()
   });
   showInviteWaiting(opponentName, inviteRef.key);
   setTimeout(async () => {
@@ -3712,11 +5005,10 @@ async function sendBattleInvite(opponentSlug, opponentName) {
 function showInviteWaiting(opponentName, inviteKey) {
   const overlay = document.createElement('div');
   overlay.id = 'invite-waiting-overlay';
-  overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:10000;display:flex;align-items:center;justify-content:center;';
+  overlay.className = 'battle-overlay';
   const card = document.createElement('div');
-  card.className = 'battle-modal-bg';
-  card.style.cssText = 'max-width:320px;width:85%;border-radius:16px;padding:28px;text-align:center;';
-  card.innerHTML = '<div style="font-size:36px;margin-bottom:12px;animation:comboPulse 1.5s ease-in-out infinite;">⚔️</div><div style="font-size:16px;font-weight:600;margin-bottom:4px;">Waiting for ' + escapeHtml(opponentName) + '...</div><div style="font-size:13px;opacity:0.5;margin-bottom:20px;">They have 30 seconds to accept</div><button onclick="cancelInvite(\'' + inviteKey + '\')" style="padding:8px 20px;border-radius:10px;font-size:13px;cursor:pointer;background:var(--card,rgba(255,255,255,0.05));border:1px solid var(--card-border,rgba(255,255,255,0.1));color:inherit;">Cancel</button>';
+  card.className = 'battle-modal-bg battle-modal battle-modal-sm';
+  card.innerHTML = '<div style="font-size:36px;margin-bottom:12px;animation:comboPulse 1.5s ease-in-out infinite;">\u2694\uFE0F</div><div style="font-size:16px;font-weight:600;margin-bottom:4px;">Waiting for ' + escapeHtml(opponentName) + '...</div><div style="font-size:13px;opacity:0.5;margin-bottom:20px;">They have 30 seconds to accept</div><button onclick="cancelInvite(\'' + inviteKey + '\')" style="padding:8px 20px;border-radius:10px;font-size:13px;cursor:pointer;background:var(--card,rgba(255,255,255,0.05));border:1px solid var(--card-border,rgba(255,255,255,0.1));color:inherit;">Cancel</button>';
   overlay.appendChild(card);
   document.body.appendChild(overlay);
 }
@@ -3728,11 +5020,14 @@ function showIncomingInvite(inviteKey, invite) {
   window._pendingInvite = { key: inviteKey, data: invite };
   const overlay = document.createElement('div');
   overlay.id = 'invite-popup-overlay';
-  overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:10001;display:flex;align-items:center;justify-content:center;animation:fadeIn 0.2s ease;';
+  overlay.className = 'battle-overlay';
+  overlay.style.zIndex = '10001';
   const card = document.createElement('div');
-  card.className = 'battle-modal-bg';
-  card.style.cssText = 'max-width:320px;width:85%;border-radius:16px;padding:28px;text-align:center;animation:popIn 0.3s cubic-bezier(0.175,0.885,0.32,1.275);';
-  card.innerHTML = '<div style="font-size:36px;margin-bottom:8px;">⚔️</div><div style="font-size:18px;font-weight:700;margin-bottom:4px;">' + escapeHtml(invite.fromName) + '</div><div style="font-size:14px;opacity:0.6;margin-bottom:20px;">challenges you to a battle!</div><div style="display:flex;gap:10px;justify-content:center;"><button onclick="declineInvite(window._pendingInvite.key)" style="flex:1;padding:10px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;background:rgba(220,60,60,0.15);color:#f87171;border:1px solid rgba(220,60,60,0.3);">Decline</button><button onclick="acceptInvite(window._pendingInvite.key,window._pendingInvite.data)" style="flex:1;padding:10px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;background:rgba(80,200,120,0.15);color:#4ade80;border:1px solid rgba(80,200,120,0.3);">Accept!</button></div>';
+  card.className = 'battle-modal-bg battle-modal battle-modal-sm';
+  card.style.animation = 'popIn 0.3s cubic-bezier(0.175,0.885,0.32,1.275)';
+  const modeLabels = {translation:'🌍 Translation Duel',definition:'📖 Definition Duel',context:'📝 Context Clash'};
+  const modeLabel = modeLabels[invite.mode] || modeLabels.translation;
+  card.innerHTML = '<div style="font-size:36px;margin-bottom:8px;">\u2694\uFE0F</div><div style="font-size:18px;font-weight:700;margin-bottom:4px;">' + escapeHtml(invite.fromName) + '</div><div style="font-size:14px;opacity:0.6;margin-bottom:4px;">challenges you to a battle!</div><div style="font-size:13px;padding:6px 14px;border-radius:8px;background:rgba(255,255,255,0.07);display:inline-block;margin-bottom:16px;">' + modeLabel + '</div><div style="display:flex;gap:10px;justify-content:center;"><button onclick="declineInvite(window._pendingInvite.key)" style="flex:1;padding:10px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;background:rgba(220,60,60,0.15);color:#f87171;border:1px solid rgba(220,60,60,0.3);">Decline</button><button onclick="acceptInvite(window._pendingInvite.key,window._pendingInvite.data)" style="flex:1;padding:10px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;background:rgba(80,200,120,0.15);color:#4ade80;border:1px solid rgba(80,200,120,0.3);">Accept!</button></div>';
   overlay.appendChild(card);
   document.body.appendChild(overlay);
   if (typeof SFX !== 'undefined') SFX.play('combo');
@@ -3790,16 +5085,20 @@ function handleBattleUpdate(data) {
 }
 
 function renderBattleWaiting(data) {
-  var cdEl = document.getElementById('battle-countdown');
-  var promptEl = document.getElementById('battle-prompt');
-  var inputEl = document.getElementById('battle-input');
-  var feedbackEl = document.getElementById('battle-feedback');
-  var timerEl = document.getElementById('battle-timer-bar');
+  // Hide game elements, show waiting message in prompt area
+  const cdEl = document.getElementById('battle-countdown');
+  const promptEl = document.getElementById('battle-prompt');
+  const inputEl = document.getElementById('battle-input');
+  const feedbackEl = document.getElementById('battle-feedback');
+  const timerEl = document.getElementById('battle-timer-bar');
   if (cdEl) cdEl.style.display = 'none';
   if (inputEl) inputEl.style.display = 'none';
   if (timerEl) timerEl.style.display = 'none';
   if (feedbackEl) feedbackEl.textContent = '';
-  if (promptEl) { promptEl.style.display = ''; promptEl.innerHTML = '<div style="padding:40px 0;"><div style="font-size:36px;margin-bottom:12px;animation:comboPulse 1.5s ease-in-out infinite;">⚔️</div><div style="font-size:16px;opacity:0.7;">Waiting for opponent to join...</div></div>'; }
+  if (promptEl) {
+    promptEl.style.display = '';
+    promptEl.innerHTML = '<div style="padding:40px 0;"><div style="font-size:36px;margin-bottom:12px;animation:comboPulse 1.5s ease-in-out infinite;">\u2694\uFE0F</div><div style="font-size:16px;opacity:0.7;">Waiting for opponent to join...</div></div>';
+  }
 }
 
 function renderBattleCountdown(value) {
@@ -3819,21 +5118,37 @@ function renderBattleCountdown(value) {
 
 function renderBattleRound(data) {
   const round = data.round;
-  if (!round || round < 1 || round > 10) return;
+  if (!round || round < 1 || round > 5) return;
   const word = data.words[round - 1];
   if (!word) return;
   if (state.battleRound === round) return;
   state.battleRound = round;
   state.battleAnswered = false;
+  // Ensure countdown is hidden when round starts
+  const cdEl = document.getElementById('battle-countdown');
+  if (cdEl) cdEl.style.display = 'none';
   const promptEl = document.getElementById('battle-prompt');
   const inputEl = document.getElementById('battle-input');
   const feedbackEl = document.getElementById('battle-feedback');
   const roundEl = document.getElementById('battle-round-num');
-  if (roundEl) roundEl.textContent = 'Round ' + round + ' of 10';
+  if (roundEl) roundEl.textContent = 'Round ' + round + ' of 5';
   if (feedbackEl) { feedbackEl.textContent = ''; feedbackEl.style.color = ''; }
-  if (promptEl) { promptEl.style.display = ''; promptEl.innerHTML = '<div style="font-size:13px;opacity:0.5;margin-bottom:4px;">Translate to English</div><div style="font-size:24px;font-weight:700;">' + escapeHtml(word.g) + '</div>'; }
+  const bMode = data.mode || 'translation';
+  const modeLabelEl = document.getElementById('battle-mode-label');
+  if (modeLabelEl) { const ml = {translation:'🌍 Translation Duel',definition:'📖 Definition Duel',context:'📝 Context Clash'}; modeLabelEl.textContent = ml[bMode] || ml.translation; }
+  let promptHtml = '';
+  if (bMode === 'definition') {
+    promptHtml = '<div style="font-size:13px;opacity:0.5;margin-bottom:4px;">Guess the word</div><div style="font-size:20px;font-style:italic;">' + escapeHtml(word.d) + '</div>';
+  } else if (bMode === 'context') {
+    const sentenceHtml = word.s ? escapeHtml(word.s).replace('_____', '<span style="border-bottom:2px solid #f59e0b;padding:0 12px;">_____</span>') : '';
+    promptHtml = '<div style="font-size:13px;opacity:0.5;margin-bottom:4px;">Fill in the blank</div><div style="font-size:18px;line-height:1.6;">' + sentenceHtml + '</div>';
+  } else {
+    promptHtml = '<div style="font-size:13px;opacity:0.5;margin-bottom:4px;">Translate to English</div><div style="font-size:24px;font-weight:700;">' + escapeHtml(word.g) + '</div>';
+  }
+  if (promptEl) { promptEl.style.display = ''; promptEl.innerHTML = promptHtml; }
   if (inputEl) { inputEl.style.display = ''; inputEl.value = ''; inputEl.disabled = false; inputEl.focus(); }
-  var timerBar = document.getElementById('battle-timer-bar'); if (timerBar) timerBar.style.display = '';
+  const timerBar = document.getElementById('battle-timer-bar');
+  if (timerBar) timerBar.style.display = '';
   renderBattleScores(data);
   clearTimeout(state._battleRoundTimer);
   state._battleRoundTimer = setTimeout(() => { if (!state.battleAnswered) submitBattleAnswer(''); }, 15000);
@@ -3852,7 +5167,7 @@ async function submitBattleAnswer(answer) {
   const inputEl = document.getElementById('battle-input');
   if (inputEl) inputEl.disabled = true;
   const feedbackEl = document.getElementById('battle-feedback');
-  if (feedbackEl) { feedbackEl.textContent = correct ? '✓ Waiting for opponent...' : '✗ Wrong — waiting...'; feedbackEl.style.color = correct ? '#4ade80' : '#f87171'; }
+  if (feedbackEl) { feedbackEl.textContent = correct ? '\u2713 Waiting for opponent...' : '\u2717 Wrong \u2014 waiting...'; feedbackEl.style.color = correct ? '#4ade80' : '#f87171'; }
   if (typeof SFX !== 'undefined') SFX.play(correct ? 'correct' : 'wrong');
   if (role === 'p1') checkRoundComplete(roomId, round);
 }
@@ -3874,15 +5189,15 @@ async function checkRoundComplete(roomId, round) {
     if (roundWinner === 'p2') scores.p2++;
     await roomRef.update({ status: 'round-result', ['answers/' + round + '/winner']: roundWinner, scores: scores });
     setTimeout(async () => {
-      if (round >= 10) {
+      if (round >= 5) {
         let winner = 'draw';
         if (scores.p1 > scores.p2) winner = 'p1';
         if (scores.p2 > scores.p1) winner = 'p2';
         await roomRef.update({ status: 'done', winner: winner });
       } else {
-        const remaining = 10 - round;
+        const remaining = 5 - round;
         const lead = Math.abs(scores.p1 - scores.p2);
-        if (lead > remaining) {
+        if (lead > remaining || (round >= 3 && lead >= 3)) {
           await roomRef.update({ status: 'done', winner: scores.p1 > scores.p2 ? 'p1' : 'p2' });
         } else {
           await roomRef.update({ status: 'active', round: round + 1 });
@@ -3918,9 +5233,9 @@ function renderRoundResult(data) {
   const opRole = myRole === 'p1' ? 'p2' : 'p1';
   const feedbackEl = document.getElementById('battle-feedback');
   let resultText = '';
-  if (winner === 'draw') resultText = 'No point — both wrong!';
-  else if (winner === myRole) resultText = 'You win this round!';
-  else resultText = escapeHtml(data.playerNames[opRole]) + ' was faster!';
+  if (winner === 'draw') resultText = 'No point \u2014 both wrong!';
+  else if (winner === myRole) resultText = '\uD83C\uDFAF You win this round!';
+  else resultText = '\u274C ' + escapeHtml(data.playerNames[opRole]) + ' was faster!';
   if (feedbackEl) { feedbackEl.textContent = resultText; feedbackEl.style.color = winner === myRole ? '#4ade80' : winner === 'draw' ? '#999' : '#f87171'; }
   const promptEl = document.getElementById('battle-prompt');
   if (promptEl && word) { const correct = word.cf || word.w; promptEl.innerHTML += '<div style="margin-top:10px;font-size:14px;opacity:0.6;">Answer: <strong>' + escapeHtml(correct) + '</strong></div>'; }
@@ -3948,10 +5263,10 @@ function renderBattleResults(data) {
   const isDraw = data.winner === 'draw';
   const opName = data.playerNames[opRole] || 'Opponent';
   let xpEarned = iWon ? 50 : isDraw ? 25 : 15;
-  xpEarned += myScore * 5;
+  xpEarned += myScore * 10;
   state.xp = (state.xp || 0) + xpEarned;
   const area = document.getElementById('battle-area');
-  if (area) area.innerHTML = '<div style="text-align:center;padding:20px;"><div style="font-size:48px;margin-bottom:12px;">' + (iWon ? '🏆' : isDraw ? '🤝' : '💪') + '</div><div style="font-size:24px;font-weight:700;margin-bottom:4px;">' + (iWon ? 'Victory!' : isDraw ? 'Draw!' : escapeHtml(opName) + ' wins!') + '</div><div style="font-size:16px;opacity:0.7;margin-bottom:16px;">' + myScore + ' – ' + opScore + '</div><div style="font-size:14px;opacity:0.6;margin-bottom:24px;">+' + xpEarned + ' XP earned</div><button onclick="leaveBattle()" class="btn btn-primary" style="padding:10px 28px;">Back to Home</button></div>';
+  if (area) area.innerHTML = '<div style="text-align:center;padding:20px;"><div style="font-size:48px;margin-bottom:12px;">' + (iWon ? '\uD83C\uDFC6' : isDraw ? '\uD83E\uDD1D' : '\uD83D\uDCAA') + '</div><div style="font-size:24px;font-weight:700;margin-bottom:4px;">' + (iWon ? 'Victory!' : isDraw ? 'Draw!' : escapeHtml(opName) + ' wins!') + '</div><div style="font-size:16px;opacity:0.7;margin-bottom:16px;">' + myScore + ' \u2013 ' + opScore + '</div><div style="font-size:14px;opacity:0.6;margin-bottom:24px;">+' + xpEarned + ' XP earned</div><button onclick="leaveBattle()" class="btn btn-primary" style="padding:10px 28px;">Back to Home</button></div>';
   if (typeof SFX !== 'undefined') SFX.play(iWon ? 'levelup' : 'correct');
   saveBattleResults(data, xpEarned);
 }
@@ -3959,12 +5274,24 @@ function renderBattleResults(data) {
 async function saveBattleResults(data, xpEarned) {
   try {
     const slug = state.studentName.toLowerCase().replace(/\s+/g, '-');
+    const myRole = state.battleRole;
+    const opRole = myRole === 'p1' ? 'p2' : 'p1';
     await studentsRef.doc(slug).update({
       xp: state.xp,
       battlesPlayed: firebase.firestore.FieldValue.increment(1),
-      battlesWon: firebase.firestore.FieldValue.increment(data.winner === state.battleRole ? 1 : 0),
+      battlesWon: firebase.firestore.FieldValue.increment(data.winner === myRole ? 1 : 0),
       battleXpEarned: firebase.firestore.FieldValue.increment(xpEarned),
       lastBattle: new Date().toISOString()
+    });
+    // Save individual battle record
+    await studentsRef.doc(slug).collection('battleHistory').add({
+      opponent: data.playerNames[opRole] || 'Unknown',
+      result: data.winner === myRole ? 'win' : data.winner === 'draw' ? 'draw' : 'loss',
+      date: new Date().toISOString(),
+      mode: data.mode || 'translation',
+      myScore: data.scores[myRole] || 0,
+      theirScore: data.scores[opRole] || 0,
+      xpEarned: xpEarned
     });
     if (typeof contributeToWeeklyGoal === 'function') contributeToWeeklyGoal(xpEarned);
   } catch (e) { console.error('Battle save error:', e); }
@@ -3975,12 +5302,12 @@ function leaveBattle() {
   clearTimeout(state._battleRoundTimer);
   state.battleRoom = null; state.battleRole = null; state.battleData = null;
   state.battleRound = 0; state.battleAnswered = false; state._roomListener = null;
-  var area = document.getElementById('battle-area');
+  // Restore battle-area DOM if it was replaced by results
+  const area = document.getElementById('battle-area');
   if (area && !document.getElementById('battle-countdown')) {
-    area.innerHTML = '<div id="battle-countdown" style="display:none;"></div><div id="battle-prompt" style="margin-bottom:16px;"></div><input type="text" id="battle-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type your answer..." style="width:100%;padding:12px 16px;border-radius:10px;font-size:16px;text-align:center;box-sizing:border-box;"><div id="battle-feedback" style="margin-top:12px;font-size:15px;font-weight:600;min-height:24px;"></div><div id="battle-timer-bar" style="margin-top:12px;height:4px;border-radius:2px;overflow:hidden;"><div id="battle-timer-fill" style="height:100%;border-radius:2px;width:100%;"></div></div>';
-    var bi = document.getElementById('battle-input'); if (bi) bi.addEventListener('keydown', function(e){ if(e.key==='Enter') submitBattleAnswer(this.value); });
+    area.innerHTML = '<div id="battle-countdown" style="display:none;"></div><div id="battle-prompt" style="margin-bottom:16px;"></div><input type="text" id="battle-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type your answer..." style="width:100%;padding:12px 16px;border-radius:10px;font-size:16px;text-align:center;box-sizing:border-box;" onkeydown="if(event.key===\'Enter\')submitBattleAnswer(this.value)"><div id="battle-feedback" style="margin-top:12px;font-size:15px;font-weight:600;min-height:24px;"></div><div id="battle-timer-bar" style="margin-top:12px;height:4px;border-radius:2px;overflow:hidden;"><div id="battle-timer-fill" style="height:100%;border-radius:2px;width:100%;"></div></div>';
   }
-  showScreen('home-screen')
+  showScreen('home-screen');
 }
 
 // ===== ASYNC QUIZ DUEL (QuizDuell model) =====
@@ -4569,14 +5896,20 @@ async function cleanupStaleBattleData() {
   } catch(e) {}
 }
 
-
 // ===== INIT =====
-SFX.init();
 (async function() {
-  // Check for saved session (auto-login only if PIN matches)
-  const saved = localStorage.getItem('5b-vocab-student');
-  if (saved) {
+  SFX.init();
+  if (localStorage.getItem('sfx-enabled') === '0') { SFX.enabled = false; }
+  const sfxBtn = document.getElementById('sfx-toggle-btn');
+  if (sfxBtn) sfxBtn.textContent = SFX.enabled ? '\uD83D\uDD0A Sound: ON' : '\uD83D\uDD07 Sound: OFF';
+  initSectionScreen();
+
+  // Check for saved session (auto-login with section)
+  const savedSection = localStorage.getItem(LS_KEY + '-section');
+  const saved = localStorage.getItem(LS_KEY);
+  if (saved && savedSection) {
     try {
+      setClassId(savedSection);
       const { id, name, pin } = JSON.parse(saved);
       if (id && pin) {
         const doc = await studentsRef.doc(id).get();
@@ -4586,22 +5919,31 @@ SFX.init();
           state.studentData = doc.data();
           if (!state.studentData.avatarId) {
             const newAv = await getAvailableAvatar();
-            state.avatarId = newAv; state.studentData.avatarId = newAv;
+            state.avatarId = newAv;
+            state.studentData.avatarId = newAv;
             await studentsRef.doc(id).update({ lastActive: firebase.firestore.FieldValue.serverTimestamp(), avatarId: newAv });
           } else {
             state.avatarId = state.studentData.avatarId;
             await studentsRef.doc(id).update({ lastActive: firebase.firestore.FieldValue.serverTimestamp() });
           }
           await loadProgress();
+          loadWeeklyGoal();
           preloadAvatars();
           updateAllAvatars();
           showHomeScreen();
-          setupPresence(); cleanupStaleBattleData(); checkPendingDuels();
           return;
         }
       }
     } catch (e) { console.error('Auto-login error:', e); }
-    localStorage.removeItem('5b-vocab-student');
+    localStorage.removeItem(LS_KEY);
+  }
+  // Auto-select if only one section, otherwise show section screen
+  if (SECTIONS.length === 1) {
+    setClassId(SECTIONS[0].id);
+    localStorage.setItem(LS_KEY + '-section', SECTIONS[0].id);
+    showScreen('login-screen');
+  } else {
+    showScreen('section-screen');
   }
 })();
 </script>
@@ -4618,56 +5960,6 @@ SFX.init();
     <button class="btn btn-secondary btn-block" style="margin-top:1rem;" onclick="document.getElementById('badge-modal').classList.remove('show')">Close</button>
   </div>
 </div>
-
-
-<div id="duel-hub-screen" class="screen">
-  <div class="progress-nav">
-    <button class="btn btn-secondary" onclick="goHome()">← Back</button>
-    <h2 style="flex:1;text-align:center;margin:0;">Quiz Duels</h2>
-    <div style="width:60px;"></div>
-  </div>
-  <div class="card">
-    <button class="btn btn-primary btn-block" onclick="openDuelChallenge()">⚔️ Challenge Someone</button>
-  </div>
-  <div id="duel-list"></div>
-</div>
-
-<!-- DUEL SCOREBOARD SCREEN -->
-<div id="duel-scoreboard-screen" class="screen">
-  <div class="progress-nav">
-    <button class="btn btn-secondary" onclick="openDuelHub()">← Back</button>
-  </div>
-  <div id="duel-scoreboard"></div>
-</div>
-
-<!-- DUEL UNIT PICKER SCREEN -->
-<div id="duel-pick-screen" class="screen">
-  <div style="text-align:center;padding:1rem 0;">
-    <h2>Pick a Unit</h2>
-    <p style="color:var(--muted);font-size:0.85rem;">Choose the topic for Round <span id="duel-pick-round">1</span></p>
-  </div>
-  <div class="source-grid" id="duel-unit-grid"></div>
-</div>
-
-<!-- DUEL PLAY SCREEN -->
-<div id="duel-play-screen" class="screen">
-  <div class="duel-play-header">
-    <div class="duel-round-label" id="duel-round-label">Round 1 · Unit 3</div>
-    <div class="duel-question-num" id="duel-question-num">Question 1 of 5</div>
-  </div>
-  <div class="duel-timer-bar" id="duel-timer-bar">
-    <div class="duel-timer-fill" id="duel-timer-fill"></div>
-  </div>
-  <div class="duel-question-area" id="duel-question-area">
-    <div class="duel-prompt" id="duel-prompt"></div>
-    <div class="duel-options" id="duel-options"></div>
-  </div>
-  <div id="duel-round-summary" style="display:none;" class="card">
-    <div id="duel-round-summary-content"></div>
-    <button class="btn btn-primary btn-block" id="duel-continue-btn" onclick="duelContinueAfterRound()">Continue</button>
-  </div>
-</div>
-
 
 <div id="avatar-picker-overlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:10000;overflow-y:auto;padding:20px;" onclick="if(event.target===this)closeAvatarPicker()">
   <div id="avatar-picker-modal" style="max-width:400px;margin:40px auto;border-radius:16px;padding:24px;position:relative;">
